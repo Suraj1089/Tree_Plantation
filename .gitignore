@@ -1,3 +1,7 @@
 #virtual envirorment 
 .venv
 venv/
+.include
+.lib
+.Scripts
+.pyvenv.cfg 
