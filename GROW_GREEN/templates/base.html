@@ -11,56 +11,29 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../static/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <title>GrowGreen</title>
   </head>
   <body>
     
     
-    <nav class="navbar py-3 navbar-expand-md bg-light">
-      <a class="navbar-brand" href="#">
-        <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-        Grow Green
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        <!-- <span>
-          <i class="fas fa-bars" style="color:#6ac610; font-size:28px;"></i>
-        </span> -->
-      </button>
-      
+    <!--Navigation bar-->
+    <div id="nav-placeholder" class="col-md-12">
+
+    </div>
+
+    <script>
+      $.get("includes/navbar.html", function(data){
+          $("#nav-placeholder").replaceWith(data);
+      });
+    </script>
+    <!--end of Navigation bar-->
     
-      <div class="collapse navbar-collapse px-5" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto mb-20 mb-md-20 navbar-items">
-          
-          <li class="nav-item px-2">
-            <a class="nav-link active" data-toggle = "tab" aria-current="page" href="base.html">HOME</a>
-          </li>
-          <li class="nav-item px-2">
-            <a class="nav-link" data-toggle = "tab" aria-current="page" href="aboutus.html">ABOUT US</a>
-          </li>
-          <li class="nav-item px-2">
-            <a class="nav-link" data-toggle = "tab" aria-current="page" href="contact.html">CONTACT US</a>
-          </li>
-          <li class="nav-item px-2">
-            <button type="button" class="btn btn-outline-success"><b>Login</b></button>
-          </li>
-          
-         
-        </ul>
-        
-        <!-- <form class="d-flex ">
-          <input class="form-control me-1" type="search" placeholder="Search by Country" aria-label="Search" name="country">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form> -->
-        
-      </div>
-      
-    </nav>
-    <div id="below-navbar"></div>
+    <div id="below-navbar" class="col-md-12"></div>
      
  
    
@@ -68,7 +41,7 @@
    
      
     <!-- Image slider   -->
-     <div class="img_slider  mx-0">
+     <div class="img_slider mx-0 col-md-12">
       <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
       
         <div class="carousel-indicators">
@@ -131,34 +104,17 @@
       
      </div> 
      
-     <section class="">
-      <footer class="footer-text text-center text-white">
+    <!--Footer-->
+    <div id="footer-placeholder" class="col-md-12">
 
-        <div class="container p-4 pb-0">
+    </div>
 
-          <section class="">
-            <p class="d-flex justify-content-center align-items-center">
-              <span class="me-3">Subscribe to our newsletter!</span>
-              <form>
-                <div>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                </div>
-              </form>
-            </p>
-          </section>
-
-        </div>
-
-    
-
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-          © 2022 Copyright:
-          <a class="text-white" href="">GrowGreen Web Application</a>
-        </div>
-
-      </footer>
-
-    </section>
+    <script>
+      $.get("includes/footer.html", function(data){
+          $("#footer-placeholder").replaceWith(data);
+      });
+    </script>
+    <!--End of Footer-->
     
   
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

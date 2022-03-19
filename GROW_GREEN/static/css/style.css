@@ -31,7 +31,7 @@ nav .navbar-nav li a {
   display: block;
   text-decoration: underline;
   color: #6ac610;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 #below-navbar {
