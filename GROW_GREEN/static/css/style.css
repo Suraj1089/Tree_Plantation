@@ -44,3 +44,68 @@ footer {
   background-color: #10c65c;
 }
 
+.social-login {
+  text-align: center;
+}
+
+.social-log {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+}
+
+.social-log li {
+  margin: 0 4px;
+}
+
+.social-log li img {
+  width: 45px;
+}
+
+.social-login p {
+  color: #8c8c8c;
+}
+
+.signin-modal .nav-tabs .nav-link {
+  background-color: #e5e5e5;
+  border-radius: 0;
+  font-weight: 600;
+  border-color: #fff;
+}
+
+.signin-modal .nav-tabs .nav-link.active {
+  background-color: #fff;
+}
+
+.signin-modal .nav-tabs .nav-item {
+  width: 50%;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.signin-modal .nav-tabs {
+  border-bottom: none;
+}
+
+.signin-tab {
+  padding: 0 3rem;
+  margin: 8px 8px;
+}
+
+.signin-tab input.form-control {
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+.signin-tab button {
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.signin-link {
+  text-align: center;
+  color: #8c8c8c;
+  margin-top: 0.5rem;
+}
