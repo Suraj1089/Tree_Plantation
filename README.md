@@ -20,3 +20,7 @@ python manage.py migrate
 
 python manage.py runserver
 
+
+
+put all required static material in folder present in GROW_GREEN/static/
+and then use python manage.py collectstatic

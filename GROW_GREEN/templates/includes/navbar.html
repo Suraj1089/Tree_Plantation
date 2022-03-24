@@ -1,3 +1,4 @@
+{% load static %}
 <nav class="navbar py-3 navbar-expand-md bg-light">
   <a class="navbar-brand" href="#">
     <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -61,9 +62,9 @@
           <p>with your social network</p>
 
           <ul class="social-log">
-            <li><a href="#"><img src="./assets/images/facebook-colored.png" alt="Login with facebook"></a></li>
-            <li><a href="#"><img src="./assets/images/googleplus-colored.png" alt="Login with google"></a></li>
-            <li><a href="#"><img src="./assets/images/twitter-colored.png" alt="Login with twitter"></a></li>
+            <li><a href="#"><img src="{% static './assets/images/facebook-colored.png' %}" alt="Login with facebook"></a></li>
+            <li><a href="#"><img src="{% static './assets/images/googleplus-colored.png' %}" alt="Login with google"></a></li>
+            <li><a href="#"><img src="{% static './assets/images/twitter-colored.png' %}" alt="Login with twitter"></a></li>
           </ul>
 
           <p>or</p>
@@ -111,3 +112,13 @@
 </div>
   
 </nav>
+
+  <div id="nav-placeholder" class="col-md-12">
+
+  </div>
+
+  <script>
+    $.get("includes/navbar.html", function(data){
+        $("#nav-placeholder").replaceWith(data);
+    });
+  </script>
