@@ -21,6 +21,12 @@ python manage.py migrate
 python manage.py runserver
 
 
-
+GROW_GREEN/static/:-
 put all required static material in folder present in GROW_GREEN/static/
 and then use python manage.py collectstatic
+
+templates:-
+put all the required html templates in folder templates with proper names
+
+******************
+update this document as you find something missing.
