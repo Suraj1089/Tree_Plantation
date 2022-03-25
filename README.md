@@ -30,3 +30,9 @@ put all the required html templates in folder templates with proper names
 
 ******************
 update this document as you find something missing.
+
+
+Beginner Guide:
+Installation Guide:
+Reference guide:
+System administration guide:
