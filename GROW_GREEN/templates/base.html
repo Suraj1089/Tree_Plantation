@@ -95,6 +95,11 @@
      
     <!--Footer-->
     {% include 'includes/footer.html' %}
+       <script>
+      $.get("includes/footer.html", function(data){
+          $("#footer-placeholder").replaceWith(data);
+      });
+    </script> 
     <!--End of Footer-->
     
   

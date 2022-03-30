@@ -7,7 +7,6 @@ def home(request):
     return render(request, 'base.html')
     # pass
     
-    
 def navbar(request):
     return render(request,'includes/navbar.html')
    
