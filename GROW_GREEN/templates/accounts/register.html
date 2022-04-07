@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+{% block 'content' %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +19,7 @@
   <link rel="stylesheet" href="./css/utils.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/mediaquery.css">
-  <title>Register | Hire youtubers</title>
+  <title>Register</title>
 </head>
 
 <body>
@@ -27,8 +30,8 @@
     <div class="container">
       <div class="row ">
         <div class="col-md-6 header-info">
-          <a href="mailto:info@ytubers.com" class="mr-3">info@ytubers.com</a>
-          <span>Call at: +91 9898989898 </span>
+          <a href="mailto:info@ytubers.com" class="mr-3">growgreen@gmail.com</a>
+          <span>Call at: +91 9370296739 </span>
         </div>
         <div class="header-buttons col-md-6 d-flex justify-content-end">
           <a class="btn btn-accent mr-3" href="/login.html">Signin</a>
@@ -121,7 +124,7 @@
         <div class="row">
           <div class="col-sm-6 text-lg-left text-center">
             <h4>
-              Reach out to hire YTubers
+              reach out us at 
             </h4>
           </div>
 
@@ -137,7 +140,7 @@
       <div class="row">
         <div class="col-md-4 text-lg-left text-center">
           <h5>
-            2020 YTubers for Hire
+            grow green
           </h5>
         </div>
         <div class="col-md-4 text-lg-center text-center">
@@ -163,13 +166,9 @@
   </footer>
   <!-- footer ends -->
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-    crossorigin="anonymous"></script>
+  {% include 'includes/footer.html' %}
 
 </body>
 
 </html>
+{% endblock 'content' %}
