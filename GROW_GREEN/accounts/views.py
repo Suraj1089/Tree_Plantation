@@ -14,3 +14,6 @@ def logout_user(request):   #function for sign in user
 
 def dashboard(request):   #function for sign in user
     return render(request, 'accounts/dashboard.html')
+
+def about(request):   #function for sign in user
+    return render(request, 'accounts/about.html')

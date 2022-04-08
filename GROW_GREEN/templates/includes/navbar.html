@@ -1,51 +1,35 @@
-{% load static %}
-<nav class="navbar py-3 navbar-expand-md bg-light">
-  <a class="navbar-brand" href="#">
-    <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-    Grow Green
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    <!-- <span>
-      <i class="fas fa-bars" style="color:#6ac610; font-size:28px;"></i>
-    </span> -->
-  </button>
-  
 
-  <div class="collapse navbar-collapse px-5" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto mb-20 mb-md-20 navbar-items">
-      
-      <li class="nav-item px-2">
-        <a class="nav-link active" data-toggle = "tab" aria-current="page" href="accounts/register.html">HOME</a>
-      </li>
-      <li class="nav-item px-2">
-        <a class="nav-link" data-toggle = "tab" aria-current="page" href="aboutus.html">ABOUT US</a>
-      </li>
-      <li class="nav-item px-2">
-        <a class="nav-link" data-toggle = "tab" aria-current="page" href="#">CONTACT US</a>
-      </li>
-      <li class="nav-item px-2">
-        <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#loginModal"><b>Register</b></button>
-      </li>
-      
-     
-    </ul>
-    
-    <!-- <form class="d-flex ">
-      <input class="form-control me-1" type="search" placeholder="Search by Country" aria-label="Search" name="country">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form> -->
-    
-  </div>
-  
-</nav>
 
-  <div id="nav-placeholder" class="col-md-12">
+  {% load static %}   
 
-  </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'home' %}">
+        <img src="{% static '' %}" alt="" width="140" height="30" alt="" loading="lazy">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={% url 'about' %}>About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Plant Tree</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={% url 'register' %}>Contact</a>
+          </li>
 
-  <script>
-    $.get("includes/navbar.html", function(data){
-        $("#nav-placeholder").replaceWith(data);
-    });
-  </script> 
+        </ul>
+      </div>
+    </div>
+  </nav>
