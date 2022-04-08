@@ -16,16 +16,16 @@
     <ul class="navbar-nav ml-auto mb-20 mb-md-20 navbar-items">
       
       <li class="nav-item px-2">
-        <a class="nav-link active" data-toggle = "tab" aria-current="page" href="base.html">HOME</a>
+        <a class="nav-link active" data-toggle = "tab" aria-current="page" href="accounts/register.html">HOME</a>
       </li>
       <li class="nav-item px-2">
         <a class="nav-link" data-toggle = "tab" aria-current="page" href="aboutus.html">ABOUT US</a>
       </li>
       <li class="nav-item px-2">
-        <a class="nav-link" data-toggle = "tab" aria-current="page" href="contact.html">CONTACT US</a>
+        <a class="nav-link" data-toggle = "tab" aria-current="page" href="#">CONTACT US</a>
       </li>
       <li class="nav-item px-2">
-        <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#loginModal"><b>Login</b></button>
+        <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#loginModal"><b>Register</b></button>
       </li>
       
      
@@ -37,79 +37,6 @@
     </form> -->
     
   </div>
-
-  <!-- Modal -->
-<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body signin-modal">
-
-        <ul class="nav nav-tabs">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#login" data-toggle="tab" id="login-tab" aria-controls="login" aria-selected="true">Log In</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#signup" data-toggle="tab" id="signup-tab" aria-controls="signup" aria-selected="false">Sign Up</a>
-          </li>
-        </ul>
-
-        <div class="social-login">
-
-          <p>with your social network</p>
-
-          <ul class="social-log">
-            <li><a href="#"><img src="{% static './assets/images/facebook-colored.png' %}" alt="Login with facebook"></a></li>
-            <li><a href="#"><img src="{% static './assets/images/googleplus-colored.png' %}" alt="Login with google"></a></li>
-            <li><a href="#"><img src="{% static './assets/images/twitter-colored.png' %}" alt="Login with twitter"></a></li>
-          </ul>
-
-          <p>or</p>
-        </div>
-
-        <div class="tab-content signin-tab" id="myTabContent">
-          <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="home-tab">
-
-            <form>
-              <div class="form-group">
-                <input type="text" class="form-control" id="exampleInputName1" aria-describedby="textHelp" placeholder="Username">
-                <div id="emailHelp" class="form-text"></div>
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-                <div id="emailHelp" class="form-text"></div>
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-              </div>
-              <button type="submit" class="btn btn-success btn-block">Submit</button>
-              <p class="signin-link">Already have an account? <a href="#">Log In Here</a></p>
-            </form>
-
-          </div>
-
-          <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="profile-tab">
-            <form>
-              <div class="form-group">
-                <input type="text" class="form-control" id="exampleInputName1" aria-describedby="textHelp" placeholder="Username">
-                <div id="emailHelp" class="form-text"></div>
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-              </div>
-              <button type="submit" class="btn btn-success btn-block">Submit</button>
-              <p class="signin-link">Don't have an account? <a href="#">Sign Up Here</a></p>
-            </form>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-</div>
   
 </nav>
 

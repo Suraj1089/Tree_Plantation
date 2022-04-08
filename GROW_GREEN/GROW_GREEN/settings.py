@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #add newly created apps in the form of appname.apps.appnameconfig
     'accounts.apps.AccountsConfig',
     'PlantTree.apps.PlanttreeConfig',
     'django.contrib.admin',
@@ -76,6 +77,8 @@ WSGI_APPLICATION = 'GROW_GREEN.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
+    #django database setup 
+    # databae name=grow_green
 	'default': {
 		'ENGINE': 'django.db.backends.mysql',
 		'NAME': 'grow_green',

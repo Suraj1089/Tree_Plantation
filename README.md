@@ -33,3 +33,13 @@ put all the required html templates in folder templates with proper names
 *********************************************************************
 
 update this document as you find something missing.
+
+
+# INSTRUCTIONS TO CREATE DATABASE AND SETUP
+--create database with name "grow_green"
+--downlaod mysqlclient in project(pip install mysqlclient)
+--go to django project and setup (DATABASES) in setting.py 
+--use python manage.py makemigration &
+--python manage.py migrate 
+--comands to fetch changes/tables in your database
+--use show tables comand to display tables
