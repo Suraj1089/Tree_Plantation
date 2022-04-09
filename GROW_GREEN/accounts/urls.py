@@ -8,4 +8,5 @@ urlpatterns = [
     path('logout',views.logout_user, name='logout'),  #url for logout
     path('dashboard',views.dashboard, name='dashboard'),  #url for logout
     path('about',views.about, name='about'),  #url for logout
+    path('contact',views.contact, name='contact'),  #url for logout
 ]
