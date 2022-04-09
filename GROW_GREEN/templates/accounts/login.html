@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+  {% load socialaccount %}
+  {% providers_media_js %}
    <main class="login container">
     <h1 class="text-center mt-5 mb-5 animate__animated animate__slideInDown">
       Login
@@ -13,11 +14,11 @@
       <form method="POST" action="{% url 'login' %}" class="col-md-5 offset-1">
         {% csrf_token %}
         <div class="form-group">
-          <input name="username" class="form-control" placeholder="User Name">
+          <input name="username" class="form-control" placeholder="User Name" required> 
         </div>
 
         <div class="form-group">
-          <input name="password" type="password" class="form-control" placeholder="Password">
+          <input name="password" type="password" class="form-control" placeholder="Password" required>
         </div>
 
 
@@ -26,8 +27,8 @@
           OR
         </div>
 
-        <button class="btn btn-primary form-btn w-100 mt-3">Facebook</button>
-        <button class="btn btn-accent form-btn w-100 mt-3 mb-3">Google</button>
+        <a href="{% provider_login_url 'facebook' method='oauth2' %}" class="btn btn-primary form-btn w-100 mt-3">Facebook</a>
+        <a class="btn btn-accent form-btn w-100 mt-3 mb-3">Google</a>
 
       </form>
     </div>

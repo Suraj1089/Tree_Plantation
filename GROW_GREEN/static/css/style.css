@@ -1,0 +1,115 @@
+<<<<<<< HEAD
+=======
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap');
+
+.brand-banner__header {
+    color:rgb(rgb(194, 0, 0), green, blue);
+    display: inline-block;
+    font-family: FaktCondensed,AvenirNextCondensed-Medium,Segoe UI,sans-serif;
+    font-size: 60px;
+    font-weight: 1000;
+    margin-bottom: 80px;
+    text-transform: uppercase;
+}
+body{
+  background-color:  rgba(255, 255, 255, 0.699);
+} 
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+nav .navbar-nav li a {
+  color: #6ac610;
+  font-size: 0.9rem;
+  font-family: 'Merriweather', serif;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.navbar ul li a:hover, .navbar ul li a.active{
+
+  font-size: 1.0rem;
+  display: block;
+  text-decoration: underline;
+  color: #6ac610;
+  transition: all 0.5s ease-in-out;
+}
+
+#below-navbar {
+  background-color: #6ac610;
+  width: 100%;
+  height: 5px;
+}
+
+footer {
+  background-color: #10c65c;
+}
+
+.social-login {
+  text-align: center;
+}
+
+.social-log {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+}
+
+.social-log li {
+  margin: 0 4px;
+}
+
+.social-log li img {
+  width: 45px;
+}
+
+.social-login p {
+  color: #8c8c8c;
+}
+
+.signin-modal .nav-tabs .nav-link {
+  background-color: #e5e5e5;
+  border-radius: 0;
+  font-weight: 600;
+  border-color: #fff;
+}
+
+.signin-modal .nav-tabs .nav-link.active {
+  background-color: #fff;
+}
+
+.signin-modal .nav-tabs .nav-item {
+  width: 50%;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.signin-modal .nav-tabs {
+  border-bottom: none;
+}
+
+.signin-tab {
+  padding: 0 3rem;
+  margin: 8px 8px;
+}
+
+.signin-tab input.form-control {
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+.signin-tab button {
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.signin-link {
+  text-align: center;
+  color: #8c8c8c;
+  margin-top: 0.5rem;
+}
+
+>>>>>>> 4d92efb04d45670a4b15bcef6236310262de4db0
