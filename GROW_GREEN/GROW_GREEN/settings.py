@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from pathlib import Path
+from pickle import TRUE
+from telnetlib import AUTHENTICATION
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    
+    #these provider are added to configure social media authentiation
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -77,6 +81,10 @@ TEMPLATES = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackends',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
 WSGI_APPLICATION = 'GROW_GREEN.wsgi.application'
 
 
@@ -142,3 +150,12 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SITE_ID = 2
+
+#allauth configuration social login and email
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
+
+# 1 day
+ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 3600
