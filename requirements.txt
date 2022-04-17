@@ -3,3 +3,4 @@ Django==4.0
 mysqlclient
 venv
 cryptography==2.8
+Pillow==9.1.0
