@@ -3,7 +3,7 @@ from django.db import models
 
 class PlantTree(models.Model):
     #class to plant tree    
-    tree_choices = (
+    tree_choices = [
         ('N', 'Neem'),
         ('K','Karanja'),
         ('M','Mango'),
@@ -14,7 +14,7 @@ class PlantTree(models.Model):
         ('BE','Ber'),
         ('NI','Nimboo'),
         
-    )
+    ]
     username = models.CharField(max_length=50,primary_key=True)
     tree_name = models.CharField(max_length=100, choices=tree_choices)
     tree_planted_date = models.DateTimeField(auto_now_add=True)
