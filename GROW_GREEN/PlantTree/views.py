@@ -13,3 +13,10 @@ def navbar(request):
     
 def footer(request):
     return render(request,'includes/footer.html')
+
+
+def test(request):
+    return render(request, 'PlantTree/index.html')
+
+def plant_ui(request):
+    return render(request, 'PlantTree/plant.html')
