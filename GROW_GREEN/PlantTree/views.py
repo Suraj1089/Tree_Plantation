@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -18,5 +19,8 @@ def footer(request):
 def test(request):
     return render(request, 'PlantTree/index.html')
 
+
 def plant_ui(request):
-    return render(request, 'PlantTree/plant.html')
+    if request.user.is_authenticated:
+        return render(request, 'PlantTree/plant.html')
+    return redirect('login')

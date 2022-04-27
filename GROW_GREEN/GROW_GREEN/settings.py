@@ -11,8 +11,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from pathlib import Path
-from pickle import TRUE
+# from pickle import TRUE
 from telnetlib import AUTHENTICATION
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -56,7 +57,7 @@ INSTALLED_APPS = [
 ]
 
 
-SITE_ID = 1
+SITE_ID = 2
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -65,7 +66,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'django_auto_logout.middleware.auto_logout',# auto logout user
 ]
+    
 
 ROOT_URLCONF = 'GROW_GREEN.urls'
 
@@ -164,7 +167,7 @@ ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_LOGOUT_ON_GET= True
 # 1 day
 ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 3600
-
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 #enable email scope to receive user’s email addresses after successful social login:
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
@@ -176,4 +179,12 @@ SOCIALACCOUNT_PROVIDERS = {
             'access_type': 'online',
         }
     }
+}
+
+#automatically logout the user
+AUTO_LOGOUT = {
+    'IDLE_TIME': timedelta(minutes=5),
+    'SESSION_TIME': timedelta(minutes=30),
+    'MESSAGE': 'The session has expired. Please login again to continue.',
+    'REDIRECT_TO_LOGIN_IMMEDIATELY': True,
 }
