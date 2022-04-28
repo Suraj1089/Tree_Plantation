@@ -14,6 +14,7 @@ from pathlib import Path
 # from pickle import TRUE
 from telnetlib import AUTHENTICATION
 from datetime import timedelta
+import environ  #imported for hiding passwords from remote repository
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,8 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
+#initialising environ
+env = environ.Env()
+environ.Env.read_env()
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-t%#5oyy@scl=qyzc6*mybvusm%ca(-!ofrltdw%%y0-5ya9*yu'
+SECRET_KEY = env('SECRET_KEY',default='unsafe-secret-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -100,9 +105,9 @@ DATABASES = {
     # databae name=grow_green
 	'default': {
 		'ENGINE': 'django.db.backends.mysql',
-		'NAME': 'grow_green',
-		'USER': 'root',
-		'PASSWORD': 'MySQLSuraj@123',
+		'NAME': env('DATABASE_NAME'),
+		'USER': env('DATABASE_USER'),
+		'PASSWORD': env('DATABASE_PASS'),
 		'HOST':'',
 		'PORT':'',
 	}
@@ -188,3 +193,4 @@ AUTO_LOGOUT = {
     'MESSAGE': 'The session has expired. Please login again to continue.',
     'REDIRECT_TO_LOGIN_IMMEDIATELY': True,
 }
+
