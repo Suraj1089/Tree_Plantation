@@ -10,7 +10,7 @@ pip install mysqlclient
 
 # For Windows
 
-GROW_GREEN->venv\scripts\activate
+GROW_GREEN->venv\scripts\activate<br>
 
 pip install -r requirements.txt
 

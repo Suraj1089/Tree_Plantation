@@ -18,7 +18,7 @@ class PlantTree(models.Model):
     username = models.CharField(max_length=50,primary_key=True)
     tree_name = models.CharField(max_length=100, choices=tree_choices)
     tree_planted_date = models.DateTimeField(auto_now_add=True)
-    tree_pictures = models.ImageField(upload_to='tree_planted_images/ %Y/ %m/ %d/')
+    tree_pictures = models.ImageField(upload_to='static/tree_planted_images/ %Y/ %m/ %d/')
     tree_description = models.TextField(default=tree_name)
     tree_planted_rewards = models.BigIntegerField()
     
