@@ -1,4 +1,4 @@
-<!--use of base html is content inside it is same for all-->
+ <!--use of base html is content inside it is same for all-->
 {% load static %}
 
 
@@ -37,24 +37,24 @@
 
 <body>
   <!-- header start-->
-<<<<<<< HEAD
+
 {% comment %}  
   {% include 'includes/header.html' %} {% endcomment %}
 
   <!--navbar-->
   {% include 'includes/navigation.html' %}
-=======
+
  
   {% comment %} {% include 'includes/header.html' %} {% endcomment %}
 
   <!--navbar-->
 
-  {% include 'navigation.html' %}
+  {% comment %} {% include 'navigation.html' %} {% endcomment %}
   {% comment %} {% include 'includes/navbar.html' %}
   {% include  %}
    {% endcomment %}
->>>>>>> 406661294fc2e294c7a4bcf700d70811d3850609
   <!-- header end -->
+  
  
 
 {% block content %}
@@ -123,9 +123,85 @@
 
 </div>
 {% endblock content %}
+   
+<div class="news">
+  <p>PLANT YOUR FAVOURITE PROJECT</p>
+  <hr>
+</div>
 
+<!-- flexbox -->
+<div class="flexcontainer">
 
+ <div class="row">
+   <div class="card">
+     <img src= "{% static 'images/amla.webp' %} " alt="Avatar" style="width:100%">
+     
+       <h3>Amla</h3>
+       <hr>
+     <div class="card-body">
+       <p>
+         Hurray Amla! Now you can slow down ageing with Amla
+       </p>
+       <a onclick="togglePopup()" id = "plantbtn" href="#" class="btn">PLANT NOW</a>
+     </div>
+   </div>
+   <div class="card">
+     <img id ="guava" src= "{% static 'images/guava.jpg' %} " alt="Avatar" style="width:100% ">
 
+       <h3>Guava</h3>
+       <hr>
+     <div class="card-body">
+       <p>
+         Guava have an all-rounder health beneficial tree.
+       </p>
+       <a onclick="togglePopup()" id = "plantbtn" href="#" class="btn">PLANT NOW</a>
+     </div>
+   </div>
+   <div class="card">
+     <img id ="guava" src= "{% static 'images/peepal.jpg' %} " alt="Avatar" style="width:100%">
+
+       <h3>Peepal</h3>
+       <hr>
+     <div class="card-body">
+       <p>
+         To all the Cancer borns,plant a Peepal and rejoice holy blessings.
+       </p>
+       <a onclick="togglePopup()" id = "plantbtn" href="#" class="btn">PLANT NOW</a>
+     </div>
+   </div>
+   <div class="card">
+     <img id ="reetha" src= "{% static 'images/reetha.jpeg' %} " alt="Avatar" style="width:100% ">
+
+       <h3>Reetha</h3>
+       <hr>
+     <div class="card-body">
+       <p>
+         Is there any Virgo tired of hair issues? Here’s a natural remedy
+       </p>
+       <a  onclick="togglePopup()" id = "plantbtn" href="#" class="btn">PLANT NOW</a>
+     </div>
+   </div>
+ </div>
+</div>
+
+<!-- POP UP -->
+<div class="popup" id="popup-1">
+ <div class="overlay"></div>
+ <div class="content">
+   <img id ="icon2" src="images/verify.png" alt="">
+   <div class="close-btn" onclick="togglePopup()">&times;</div>
+   <h1 id="success">SUCCESS</h1>
+   <p id="placed">Your order has been placed and is being processed...</p>
+ </div>
+</div>
+
+<div class="news">
+   <p>PLANT YOUR TREE WITH EASY STEPS</p>
+  <hr>
+</div>
+<div class="steps">
+  <img src= "{% static 'images/treeplant.jpeg' %} " alt="">
+</div>
 
   <!-- footer -->
   
@@ -143,7 +219,7 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="{% static './js/script.js' %}"></script>
   <script src="{% static './js/popup.js' %}"></script>
-  {% comment %} <script src="{% static 'js/popup.js' %}"></script> {% endcomment %}
+  <script src="{% static 'js/popup.js' %}"></script> 
  
 
   <!-- scripts -->
@@ -153,6 +229,15 @@
 </html>
 
 <style>
+  .steps{
+    margin-left: 350px;
+   
+    margin-bottom: 50px;
+  }
+  .steps img {
+    height: 500px;
+    width: 870px;
+  }
   .container{
     background-color: rgb(240, 240, 240);
     }
