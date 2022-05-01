@@ -1,6 +1,7 @@
 
 {% load static %}
-<nav class="  navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+<nav id="siteNav" class="  navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
           
     <a class="navbar-brand" href="#">
         <div id="growgreen">
@@ -19,24 +20,24 @@
         <li class="nav-item active">
           <a class="nav-link"  href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link"  href={% url 'about' %}>About Us</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="{% url 'plant_ui' %}">Plant Tree</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="#">Services</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href={% url 'contact' %}>Contact</a>
         </li>
         <header class="header " >
             
         
             {% if user.is_authenticated %}
-              <a class="btn btn-accent mr-3"  href="{% url 'dashboard' %}">dashboard</a>
-              <a class="btn btn-accent " href="{% url 'logout' %}">SIGN OUT</a>        
+              <a class="btn btn-accent mr-3" id="headersign" href="{% url 'dashboard' %}">dashboard</a>
+              <a class="btn btn-accent " id="headersignout" href="{% url 'logout' %}">SIGN OUT</a>        
             
             {% else %}
               <a class="btn btn-accent mr-3" id="headersign" href="{% url 'login' %}">SIGN IN</a>
