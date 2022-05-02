@@ -39,6 +39,8 @@ input[type=submit]:hover {
   background-color: #f2f2f2 width:30%;
   padding: 20px;
 }
+
+
 </style>
 </head>
 <body>
@@ -46,12 +48,15 @@ input[type=submit]:hover {
 <h3>Contact Form</h3>
 
 <div class="container">
-  <form action="/action_page.php">
-    <label for="fname">First Name<br></label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  <form method="POST" action="">
+    <label class="active" jfor="fname">First Name<br></label>
+    <input type="text" id="fname" name="firstname" placeholder="First Name">
 
     <label for="lname"><br>Last Name<br></label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <input type="text" id="lname" name="lastname" placeholder="Last Name">
+
+    <label for="lemail"><br>Email<br></label>
+    <input type="text" id="lname" name="lastname" placeholder="Last Name">
 
     <label for="country"><br>Country<br></label>
     <select id="country" name="country">

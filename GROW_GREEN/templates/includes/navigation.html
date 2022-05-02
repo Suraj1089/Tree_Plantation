@@ -44,7 +44,7 @@
             
             {% else %}
               <a class="btn btn-accent mr-3" id="headersign" href="{% url 'login' %}">SIGN IN</a>
-              <a class="btn btn-accent " id="headersignout" href="{% url 'register' %}">SIGN UP</a>
+              <a class="btn btn-accent " onclick="document.getElementById('id01').style.display='block" id="headersignout" href="{% url 'register' %}">SIGN UP</a>
     
             {% endif %}
     
@@ -54,6 +54,8 @@
     </div>
     
   </nav>
+
+
 
   <style>
       #navbarNav2{

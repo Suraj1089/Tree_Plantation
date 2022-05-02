@@ -186,15 +186,31 @@
 </div>
 
 <!-- POP UP -->
+
 <div class="popup" id="popup-1">
- <div class="overlay"></div>
- <div class="content">
-   <img id ="icon2" src="{% static 'images/verify.png' %}" alt="">
-   <div class="close-btn" onclick="togglePopup()">&times;</div>
-   <h1 id="success">SUCCESS</h1>
-   <p id="placed">Your order has been placed and is being processed...</p>
- </div>
-</div>
+      <div class="overlay"></div>
+      <div class="content">
+          <div class="close-btn" onclick="togglePopup()">&times;</div>
+          <h1 id="success">LOGIN FORM</h1>
+        <form>
+          <div class="form-group">
+            <label id = "emailID" for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+           </div>
+          <div  class="form-group">
+            <label id = "pass" for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          
+          <button id ="btnsubmit" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div class ="wrap-flex"><div>Not a member?</div> 
+         
+      <a id="signup" href=""></a> SignUp Now</div>
+        
+      </div>
+    </div>
+
 
 <div class="news">
    <p>PLANT YOUR TREE WITH EASY STEPS</p>
@@ -229,3 +245,99 @@
 
 </html>
 
+{% comment %} login poppup  {% endcomment %}
+
+   
+<style>
+
+.popup .overlay{
+position: fixed;
+top:0px;
+width: 300vw;
+height: 800vh;
+background-color: rgb(220, 220, 220);
+z-index: 1;
+display: none;
+}
+
+.popup .content{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%) scale(0);
+background-color: rgb(255, 255, 255);
+width: 350px;
+height: 380px;
+z-index: 2;
+ padding: 20px;
+box-sizing: border-box;
+}
+
+.popup .close-btn{
+position: absolute;
+right: 20px;
+top: 20px;
+width: 20px;
+height: 20px;
+background-color: #222;
+color: #fff;
+font-size: 20px;
+font-weight: 500;
+line-height: 16px;
+text-align: center;
+border-radius: 50%;
+}
+
+
+.popup.active .overlay{
+display: block;
+}
+.popup.active .content{
+transition: all 300ms ease-in-out;
+transform: translate(-50%,-50%) scale(1);
+box-shadow: 0 0 45px 0 rgba(20, 27, 202, .17);
+border-radius: 4%;
+}
+#success{
+text-align: center;
+font-weight: 700;
+margin-bottom: 25px;
+margin-top: 15px;
+font-size: 25px;
+}
+#placed{
+text-align: center;
+font-weight: 600;
+font-size: 21px;
+ 
+}
+.wrap-flex { display: flex; }
+.wrap-flex { 
+  margin-left: 40px;
+  margin-top: 20px;
+  font-weight: 500;
+
+ }
+#signup{
+  margin-left: 10px;
+   
+ }
+#emailID{
+  font-weight: 500;
+font-size: 18px;
+}
+#pass{
+  font-weight: 500;
+font-size: 18px;
+}
+
+#btnsubmit{
+  margin-left: 15px;
+  margin-top: 10px;
+  width: 280px;
+  background: linear-gradient(to right, #57f3f5 ,#b117f8, #770ca8);
+
+
+}
+
+</style>
