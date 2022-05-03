@@ -186,6 +186,12 @@
 </div>
 
 <!-- POP UP -->
+{% if user.is_authenticated %}
+      <h1>Tree Planted successfully</h1>
+
+{% else %}
+
+
 
 <div class="popup" id="popup-1">
       <div class="overlay"></div>
@@ -210,6 +216,15 @@
         
       </div>
     </div>
+
+{% endif %}
+
+
+
+
+
+
+
 
 
 <div class="news">
