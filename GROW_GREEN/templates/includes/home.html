@@ -1,0 +1,64 @@
+<div class="flexcontainer">
+     
+    <div class="row">
+      <div class="card">
+        <img src="images/amla.webp" alt="Avatar" style="width:100%">
+        
+          <h3>Amla</h3>
+          <hr>
+        <div class="card-body">
+          <p>
+            Hurray Amla! Now you can slow down ageing with Amla
+          </p>
+          <a onclick="togglePopup()" id = "plantbtn" href="#" class="btn">PLANT NOW</a>
+        </div>
+      </div>
+      <div class="card">
+        <img id ="guava" src="images/guava.jpg" alt="Avatar" style="width:100% ">
+  
+          <h3>Guava</h3>
+          <hr>
+        <div class="card-body">
+          <p>
+            Guava have an all-rounder health beneficial tree.
+          </p>
+          <a onclick="togglePopup()" id = "plantbtn" href="#" class="btn">PLANT NOW</a>
+        </div>
+      </div>
+      <div class="card">
+        <img id ="guava" src="images/peepal.jpg" alt="Avatar" style="width:100%">
+  
+          <h3>Peepal</h3>
+          <hr>
+        <div class="card-body">
+          <p>
+            To all the Cancer borns,plant a Peepal and rejoice holy blessings.
+          </p>
+          <a onclick="togglePopup()" id = "plantbtn" href="#" class="btn">PLANT NOW</a>
+        </div>
+      </div>
+      <div class="card">
+        <img id ="reetha" src="images/reetha.jpeg" alt="Avatar" style="width:100% ">
+  
+          <h3>Reetha</h3>
+          <hr>
+        <div class="card-body">
+          <p>
+            Is there any Virgo tired of hair issues? Here’s a natural remedy
+          </p>
+          <a  onclick="togglePopup()" id = "plantbtn" href="#" class="btn">PLANT NOW</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  {% comment %} pop up {% endcomment %}
+  <div class="popup" id="popup-1">
+    <div class="overlay"></div>
+    <div class="content">
+      <img id ="icon2" src="images/verify.png" alt="">
+      <div class="close-btn" onclick="togglePopup()">&times;</div>
+      <h1 id="success">SUCCESS</h1>
+      <p id="placed">Your order has been placed and is being processed...</p>
+    </div>
+  </div>

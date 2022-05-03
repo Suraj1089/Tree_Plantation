@@ -1,0 +1,37 @@
+ #navbarNav2{
+          margin-left: 330px;
+          margin-top: -45px;
+          color: rgb(31, 230, 20);
+          font-weight: 700;
+       }
+       #navbarNav2:hover{
+
+        font-size: 1.0rem;
+        display: block;
+        text-decoration: underline;
+        color: #6ac610;
+        transition: all 0.5s ease-in-out;
+      }
+      #headersign{
+        margin-left: 305px;
+        padding: 2px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: rgb(255, 11, 166);
+        border-radius: 13px;
+        color: rgb(255, 255, 255);
+        font-weight: 600;
+
+
+      }
+      #headersignout{
+        margin-left: 15px;
+        padding: 2px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: rgb(124, 0, 129);
+        border-radius: 13px;
+        color: rgb(255, 255, 255);
+        font-weight: 600;
+
+      }

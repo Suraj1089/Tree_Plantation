@@ -1,4 +1,4 @@
-<!--use of base html is content inside it is same for all-->
+ <!--use of base html is content inside it is same for all-->
 {% load static %}
 
 
@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+ 
   <!-- fontawesome cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
@@ -31,18 +31,31 @@
   <link rel="stylesheet" href="{% static './css/utils.css ' %}">
   <link rel="stylesheet" href="{% static './css/style.css ' %}">
   <link rel="stylesheet" href="{% static './css/mediaquery.css ' %}">
+  <link rel="stylesheet" href="{% static './css/fruits.css' %}">
 
   <title>ytubers | Hire youtubers</title>
 </head>
 
 <body>
   <!-- header start-->
- 
-  {% include 'includes/header.html' %}
+
+{% comment %}  
+  {% include 'includes/header.html' %} {% endcomment %}
 
   <!--navbar-->
-  {% include 'includes/navbar.html' %}
+  {% include 'includes/navigation.html' %}
+
+ 
+  {% comment %} {% include 'includes/header.html' %} {% endcomment %}
+
+  <!--navbar-->
+
+  {% comment %} {% include 'navigation.html' %} {% endcomment %}
+  {% comment %} {% include 'includes/navbar.html' %}
+  {% include  %}
+   {% endcomment %}
   <!-- header end -->
+  
  
 
 {% block content %}
@@ -111,254 +124,86 @@
 
 </div>
 {% endblock content %}
+   
+<div class="news">
+  <p>PLANT YOUR FAVOURITE PROJECT</p>
+  <hr>
+</div>
+
+<!-- flexbox -->
+<div class="flexcontainer">
+
+ <div class="row">
+   <div class="card">
+     <img src= "{% static 'images/amla.webp' %} " alt="Avatar" style="width:100%">
+     
+       <h3>Amla</h3>
+       <hr>
+     <div class="card-body">
+       <p>
+         Hurray Amla! Now you can slow down ageing with Amla
+       </p>
+       <a onclick="togglePopup()" id = "plantbtn" href="#" class="btn">PLANT NOW</a>
+     </div>
+   </div>
+   <div class="card">
+     <img id ="guava" src= "{% static 'images/guava.jpg' %} " alt="Avatar" style="width:100% ">
+
+       <h3>Guava</h3>
+       <hr>
+     <div class="card-body">
+       <p>
+         Guava have an all-rounder health beneficial tree.
+       </p>
+       <a onclick="togglePopup()" id = "plantbtn" href="#" class="btn">PLANT NOW</a>
+     </div>
+   </div>
+   <div class="card">
+     <img id ="guava" src= "{% static 'images/peepal.jpg' %} " alt="Avatar" style="width:100%">
+
+       <h3>Peepal</h3>
+       <hr>
+     <div class="card-body">
+       <p>
+         To all the Cancer borns,plant a Peepal and rejoice holy blessings.
+       </p>
+       <a onclick="togglePopup()" id = "plantbtn" href="#" class="btn">PLANT NOW</a>
+     </div>
+   </div>
+   <div class="card">
+     <img id ="reetha" src= "{% static 'images/reetha.jpeg' %} " alt="Avatar" style="width:100% ">
+
+       <h3>Reetha</h3>
+       <hr>
+     <div class="card-body">
+       <p>
+         Is there any Virgo tired of hair issues? Here’s a natural remedy
+       </p>
+       <a  onclick="togglePopup()" id = "plantbtn" href="#" class="btn">PLANT NOW</a>
+     </div>
+   </div>
+ </div>
+</div>
+
+<!-- POP UP -->
+<div class="popup" id="popup-1">
+ <div class="overlay"></div>
+ <div class="content">
+   <img id ="icon2" src="{% static 'images/verify.png' %}" alt="">
+   <div class="close-btn" onclick="togglePopup()">&times;</div>
+   <h1 id="success">SUCCESS</h1>
+   <p id="placed">Your order has been placed and is being processed...</p>
+ </div>
+</div>
+
+<div class="news">
+   <p>PLANT YOUR TREE WITH EASY STEPS</p>
+  <hr>
+</div>
+<div class="steps">
+  <img src= "{% static 'images/treeplant.jpg' %} " alt="">
+</div>
 
-  <p>
-  <h1>36 Fastest Growing Trees in India - Shade Giving Trees </h1>
-    <br>
-<h2>23.02.2021 Posted In Statistics 0 Comments</h2><br>
-<h1>36 Fastest Growing Trees in India</h1><br>
-Trees are a blessing to mankind in every single way and we need to start appreciating nature more.<br> They are not only important for oxygen but also provide food to animals and men alike. It ensures a safe environment and beautifies the world we live in. Trees also save humans from the harmful effects of pollution and soil erosion, it cleans the air, reduces carbon footprints amongst other things. Trees provide shade during summers and cool the air during spring and also block the harsh winds during winter!
-
-Trees are more than just a living structure in the world. It is a world in itself.<br> Humans are forgetting the importance of trees and we have been on a rampage of destroying nature for our economic benefit. This is an act that we will soon regret and hopefully, it will not be too late to amend things. We cannot leave a dry and destroyed planet for future generations.
-
-The best way to rejuvenate the Earth is by planting more and more trees.<br> We can take the first step towards making our planet green again. Here is a list of 35+ trees that grow at a fast rate in India.
-
- <br>
-
-<h2>1. Jamun Tree</h2><br>
-
-The Jamun tree has a very tall appearance, it grows to about 30-35 feet.<br> This tree happens to grow at a very fast rate and is also amongst the easiest to grow. The fruit of this tree is widely loved and consumed. It is known to have numerous health benefits and is used to treat many health disorders like diabetes, indigestion, blood pressure, etc. These trees can live up to 100 years or more. At the upper parts of the tree bark is light greyish and smooth, at the base of the tree, the bark becomes dark grey and rough. The wood of this tree is water-resistant. Leaves are like turpentine and have a soothing aroma.
-
- <br>
-
-<h1>2. Karanja Tree</h1><br>
-
-Karanja tree is one of the fastest-growing species in India. <br>It is an extensively consumed tree because of its oil that is generated from its seeds. The extracted oil is used for making biofuel. The height of this tree goes up to about 15-25 meters and it looks absolutely beautiful in full bloom. It is a flowering tree with lavender, pink and white-colored flowers. The tree is well suited to extreme temperatures and does well with low amounts of water as well.
-
- <br>
-
-<h1>3. Papaya Tree</h1><br>
-
-
-
-The Papaya tree is one of the most loved fruit trees in the country.  <br>It has a short life span but is among the fastest-growing trees.  The tree is known to grow a height of about 10 to 15 feet and has a single trunk. Its fruit has a sweet and juicy taste and is a commonly consumed fruit in many Indian households. Lots of sweet dishes and food items are also made using the fruit, raw or ripe.
-
- <br>
-
-<h1>4. Moringa or the Drum Stick Tree</h1><br>
-
-This tree is also called the horseradish tree. <br>This tree has been used widely in medicine and Ayurveda due to its medicinal values. Moringa trees are the easiest and fastest to grow and can reach a height of about 30 to 40 feet. They are capable of growing even in poor soil conditions but need to be watered generously. The fruit of the tree is cooked and consumed in many Indian households. A paste is also made of its leaves which are used in a lot of powders and pastes in the southern part of the country.
-
- <br>
-
-5. Almond Tree<br>
-
-The Almond tree is the oldest form of a tree from which the fruit Almond is cultivated. <br>It is native to the Rosaceae family and has the potential to grow very fast. It is said that the tree grows up to a height of about 15-20 feet. The almond is a rich dry fruit variety. It is loaded with protein, fiber, magnesium, vitamins, and other essential nutrients. It is deciduous in nature and is the first fruit to bloom at the end of winter. It is known to keep the surrounding land cool.
-
- <br>
-
-6. Kapok tree<br>
-
-The Kapok tree has quite a fast growth rate in Indian temperatures. <br>It can reach a height of up to 200 feet. This tree is generally found in the rainforest regions of India and also has the ability to grow well even in salty soil. The wood of the Kapok tree is used for making coffins as it is very sturdy in nature. The leaves of this tree form a canopy and are evergreen in nature. It is not only cultivated for its wood, but also for its fiber and floss.
-
- <br>
-
-7. Indian Wild Cherry tree<br>
-
-The Indian wild cherry tree grows well in moist and fertile soil and is one of the fastest-growing trees in India.<br> It can reach a height of 50 ft and also tend to grow well with high exposure to sunlight. This tree has medicinal benefits as well, the bark of the tree is used to treat respiratory problems and is also used as a sedative. It is a rich source of vitamin C as well.
-
- <br>
-
-8. Sagwan Tree or Teak Tree<br>
-
-It is known to hold certain medical properties that can cure various stomach diseases.<br> It has a long life span of over 200 years. It is a hardwood deciduous tree that is found in mixed rain forests. This tree has been widely used all across India for about 2000 years now. This tree has a high oil content which makes it difficult for it to rot. It has medicinal purposes and it is also used in furniture, tool making, etc.
-<br>
- 
-
-9. Amrood Tree
-<br>
-
-
-The guava fruit is a national favorite and is obtained from this tree. <br>It is widely available all through India and is also available all year round. This tree grows up to the height of almost 30 feet and is one of the easiest trees to grow and maintain. This tree requires well-drained soil and fertility.  It is common in the backyards. The tree is easy to recognize because of its smooth, thin, copper-colored bark that flakes off, showing the greenish layer beneath. This is also a flowering tree so it adds to the visual senses as well.
-
- <br>
-
-10. Mahua Tree<br>
-
-This tree reaches a height of about 20 meters and grows very well in sandy soil.<br> Because of this reason, this tree is widely seen in the arid regions of northern India. The seeds of this tree are used in cooking by extracting the oil from it. This tree also blooms flowers which are quite useful and contains various vitamins, minerals, and calcium.  The leaves appear dusty pink gradually changing their tinge to midnight green. With numerous properties, Mahua has been considered a boon for the pharmaceutical and food industries.
-<br>
- 
-
-11. Oak Tree<br>
-
-This tree is the perfect example of the kind of trees that grow in the<br> hilly regions of the Himalayas. It is a fast-growing tree and is one of the primary sources of fuelwood. The leaves are used by people as a significant source of fodder for livestock. It is distributed throughout the north temperate zone and at high altitudes in the tropics. Quercus species are characterized by alternate, simple, deciduous, or evergreen leaves with lobed, toothed, or entire margins.
-
- <br>
-
-12. Harra Tree
-<br>
-This tree holds a lot of importance in Indian Mythology. <br>It is said that when the gods were drinking nectar in the heavens, a drop fell on earth and that was the first Harra tree. It is a deciduous tree that is 30 m tall. The flowers of this tree are dull in color and are found at the end of the branches. The fruit of this tree is hard and greenish. The seed of the fruit has an essential role in curing ailment disorders.
-
- <br>
-
-13. Neem Tree<br>
-
-This is a tree that has found its way into the daily lives of Indians. <br>It is extremely famous for its medicinal values. Every single part of that tree is utilized for some or the other produce. The leaves and bark are all used to cure various diseases. Back when there were no medicines, this tee was instrumental in curing many diseases.
-<br>
- 
-
-14. Bamboo
-<br>
-Bamboo is a hollow stem and is found in humid tropical climatic conditions regions of Asia.<br> It is the fastest-growing tree in the India and India is one of the largest bamboo producers in the world. This tree can reach its full maturity within 90 days after plantation.
-<br>
- 
-
-15. Ber Tree
-<br>
- Also known as the Chinese date, or Indian Plum, it is found in various regions across India. <br>Its fruits can help increase bone density and have several other medicinal purposes. Ber is a medium-sized tree that grows vigorously. It can be deciduous or evergreen depending upon the climate. It is well adapted to drought conditions and has a rapidly developing taproot system. It is known for its ability to withstand adverse conditions, such as salinity, drought, and waterlogging.
-
- <br>
-
-16. Nimboo Tree
-
-
-<br>
-The Lemon (Hindi name - Nimboo) is a small evergreen tree of about 11 feet high,<br> the bark varying in color from clear grey on the trunk, green on the younger branches to a purplish color on the twigs. The trees have thorns and fruit that turn from green to yellow on ripening. On a lemon tree, flowers and ripe fruits can be found at the same time.
-<br>
- 
-
-17. Sadad Tree
-<br>
-The Sadad Tree is also known as the Arjuna tree, is a large deciduous tree<br> that forms a canopy that is full at the crown. The average height of this tree is 70 meters. Usually found near the bank of rivers or near dry river beds, the tree is well known for its yellow flowers. This tree has a vital role in Ayurveda. It was initially introduced to treat heart-related diseases.
-
- 
-<br>
-18. Elm Tree<br>
-
-Indian Elm or Dhauranjo is a huge deciduous tree, growing up to 18 m tall. <br>It has dark-hued bark, stripping in quirky scales on old trees. It grows very easily in the forest cover of India and is used widely in the production of a lot of materials. It has, on the other hand, organized leaves with elliptic-oval shape, 3-6 cm wide and 8-14 cm long, smooth, with edges whole, and a sharp tip.
-
- <br>
-
-19. Mangroves Tree
-<br>
-These mangrove trees are commonly found in tropical and coastal areas. <br>These trees are so magnificent and gigantic that people travel from all over to take a journey through a mangrove forest. These trees play a vital role when it comes to preserving the ecosystem. The thick cover also acts as a cover to protect the coastal regions from any threats, in a way it adds to the coastal and national security. The roots of these trees are extended and it also forms a nursery. These trees work great when it comes to purifying the air and protecting soil erosion. These mangroves are home to some of the most dangerous species of water animals as well.
-<br>
- 
-
-20. Banyan Tree
-
-<br>
-
-This tree is the national tree of the country and its presence dates back centuries.<br> There are mentions of the banyan tree from even before the time of Lord Buddha and it forms a very auspicious part of Indian culture. This tree is a very grand tree and spreads over a large area. It gives respite to humans and animals alike and is also considered to be an omen of wishful thinking. This tree grows to almost 100 years.
-
- <br>
-
-21. Lal Chandan Tree<br>
-
-The Lal Chandan tree is a moderately sized tree that grows well even in degraded<br> soil. It grows up to 8 meters and to a height of 5 meters in barely three years. It is a very easy tree to grow and maintain.
-<br>
- 
-
-22. Semal Tree<br>
-
-The botanical name of the Semal Tree is Bombax Ceiba. Semal tree in English is<br> called the Silk Cotton Tree. The Semal Tree is wet tropical weather growing a tree that grows to an average of 20 meters. The old tree of Semal grows up to 60 meters. The leaves of this tree are deciduous in the winter season. Semal tree is one of those plants which humans have been using for a long time to earn various kinds of benefits. Humans and animals and birds receive many benefits from this tree. Natural trees that grow naturally around forests and villages also form a source of income.
-
- <br>
-
-23. Shikhakai
-<br>
-Shikakai is an ancient herb that has extreme cleansing properties. It is used <br>in curing malaria as well. This herb helps to grow strong and shiny hair and the leaves are a good source of medicine to cure skin disorders. It is mainly grown in warm regions and it tends to grow very fast. This fruit is used in a variety of pastes and powders as well. It is widely used on sweet dishes to add a different kind of flavor.
-
- 
-<br>
-24. Amla tree
-<br>
-This tree is a gift to humanity. The fruit this tree bears has too many ayurvedic<br> qualities that has been helping mankind since forever. It is a greenish-yellow fruit with six stripes on it. It is sweet and sour at the same time and is loaded with all sorts of vitamins and health benefits.
-<br>
- 
-
-25. Karanj Tree
-<br>
-
-
-This tree is very instrumental in preventing soil erosion along the side of roads.<br> For this reason, one can find this tree on the highways. This tree also assists in nitrogen-fixing. This tree also acts as an essential feedstock for Biodiesel that is being used for reclamation and soil stabilizing.
-
- <br>
-
-26. Madhukar Tree
-<br>
-The best part about this tree is that it can be planted in any type of soil <br>and it will still grow very fast. The preferred type of soil is sandy but it does just fine in other types as well. The tree grows up to 20 meters and has numerous health benefits.
-
- <br>
-
-27. Babool<br>
-
-This tree goes 5-20 meters high and prefers to grow in sandy or sterile areas <br>with an atmosphere that is dry during most of the year. The tree can be grown in any type of soil and has quite a bit of use, medicinal and otherwise. They can be used to strengthen the gums and stop gingivitis and whiten the teeth. It also helps to alleviate other ailments like skin irritation, diarrhea, and arrest bleeding.
-<br>
- 
-
-28. Banana Tree
-<br>
-The banana tree is one of the fastest-growing fruit trees in India. It can reach<br> up to 10 to 30‘feet in less than two years. Banana is the oldest and commonest fruit known to mankind. In India, banana trees are mostly grown in Tamil Nadu, Andhra Pradesh, Assam, Maharashtra, and Karnataka. It is a rich source of carbohydrates and is rich in vitamins particularly vitamin B.
-
- <br>
-
-29. Custard Apple
-<br>
-The custard apple tree is also one of the fastest-growing fruit trees in India.<br> It responds well to organic fertilizers, mulching, and frequent irrigation if there is dry weather during the growing season. Besides high nutritive value, it has good medicinal value too. It is low in Cholesterol and is full of Vitamin C, Iron, Manganese, and Potassium.
-<br>
- 
-
-30. Peach Tree
-<br>
-The Peachtree is a fast-growing tree that takes nearly 2 to 3 years to bear <br>fruit but some varieties can harvest after one year if given adequate care. It can grow as tall as 20 to 25 feet. It is an extraordinary fruit crop, which is mostly cultivated in the temperate zone in the colder region, mainly in the hilly areas such as Uttarakhand, Jammu and Kashmir, and Sikkim.
-<br>
- 
-
-31. Apricot Tree
-
-<br>
-
-Apricot is one of the fastest-growing fruit trees in India. It is rich in <br>vitamin A and contains proteins, carbohydrates, and phosphorus. The apricot tree grows fast but takes nearly 2 years to start bearing fruits.
-
- <br>
-
-32. Citrus Tree
-<br>
-The Citrus tree is one of the fastest-growing fruit trees in India. They <br>are self-pollinating, so you need only one tree to produce the fruit. They start bearing fruit the year after they are planted but they fully bear it in three years. The tree is quite popular in Indian Gardens thanks to its fresh aroma that fills in the landscape.
-
- <br>
-
-33. Pear Tree
-<br>
-The Pear tree is a fast-growing fruit tree that needs full sun to produce <br>the most fruit. It takes nearly 3 to 10 years for the tree to begin flowering and bearing fruit. It is one of the most important fruit crops that is grown in temperate regions.
-
- <br>
-<br>
-34. Shisham
-<br>
-The Shisham tree is a medium to large deciduous tree, native to India with<br> a light crown that reproduces by seeds. The wood is among the finest cabinet, furniture, and veneer timbers.
-
- <br>
-
-35. Bahasa Tree
-<br>
-The Bahasa tree is a tree with beautiful and lovely flowers. The tree <br>looks fascinating and stunning in the month of April. Also, this tree is grown in dry climates thus the tree can be found in plenty in the southern states. The height of the tree reaches up to 40 feet.
-
- <br>
-
-36. Eucalyptus Tree
-<br>
-The eucalyptus tree grows fast, attaining heights of 30 feet or more in <br>less than a decade. Eucalyptus is believed to have a number of medicinal properties. An ingredient in many products, it is used to decrease symptoms of congestion, cough, and colds. It is also used in ointments and creams aimed at relieving muscle and joint pain.
-
- <br>
-
-This is just a very small list of what nature can do for us. We, at Nelda, <br>want to educate everyone about so much more.
-<br>
-Nelda means champion in the Irish language and a person who lives by trees.<br> At Nelda Foundation, we understand that working for the environment is everyone’s responsibility. If you or your company wants to do tree plantation in Pune, Nelda can be your best companion. Doing this for 5 years now, we're used to running plantation drives in Pune and helping various NGOs make our city greener. 
-<br>
-With our army of volunteers and years of experience, we can work together <br>to make your plantation drive in Pune successful. You can visit our website to read new, interesting articles on the nature around us as well. What are you waiting for? Visit us at www.nelda.org.in today and take the first step to making the Earth a better and greener place to live in!
-  </p>
   <!-- footer -->
   
   {% include 'includes/footer.html' %}
@@ -374,8 +219,13 @@ With our army of volunteers and years of experience, we can work together <br>to
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="{% static './js/script.js' %}"></script>
+  <script src="{% static './js/popup.js' %}"></script>
+  {% comment %} <script src="{% static 'js/popup.js' %}"></script> {% endcomment %}
+ 
+
   <!-- scripts -->
 
 </body>
 
 </html>
+

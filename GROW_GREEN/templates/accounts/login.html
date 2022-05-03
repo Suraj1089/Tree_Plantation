@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
+
 {% load static %}
 {% block content %}
   {% load socialaccount %}
   {% providers_media_js %}
-   <main class="login container">
+   <main id="logincontainer" class="login container">
     <h1 class="text-center mt-5 mb-5 animate__animated animate__slideInDown">
       Login
     </h1>
@@ -22,7 +23,7 @@
         </div>
 
 
-        <button type="submit" class="btn btn-accent form-btn w-100 mt-3 mb-3">Signin</button>
+        <button type="submit" id = "btnSignin" class="btn btn-accent form-btn w-100 mt-3 mb-3">Signin</button>
         <div class="text-center">
           OR
         </div>
@@ -33,4 +34,14 @@
       </form>
     </div>
   </main>
-{% endblock content %}
+
+<style>
+  #btnsignin{
+background-color: aqua;
+  }
+
+  h1{
+margin-top: 500px;
+  }
+</style>
+{% endblock %}
