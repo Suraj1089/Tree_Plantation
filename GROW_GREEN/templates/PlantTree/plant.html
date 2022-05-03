@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Business 2</title>
+    <title>Plant Tree</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
@@ -44,7 +44,7 @@
                 </button>
                 <a class="navbar-brand" href="#">
                 	<span class="glyphicon glyphicon-fire"></span> 
-                	LOGO
+                	GrowGreen.org
                 </a>
             </div>
             <!-- Navbar links -->
@@ -81,12 +81,55 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>Dramatically Engage</h1>
-                <p>Objectively innovate empowered manufactured products whereas parallel platforms.</p>
-                <a href="#" class="btn btn-primary btn-lg">Plant Now</a>
+                <h2>PLANT A TREE OF YOUR CHOICE</h2>
+                {% comment %} <p>Objectively innovate empowered manufactured products whereas parallel platforms.</p> {% endcomment %}
+                <a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal" style="margin: 30px;">Plant Now</a>
             </div>
         </div>
     </header>
+
+    <!--Modal content-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLabel">Please fill the following:</h5> 
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              
+                <form>
+                    <div class="form-group col-md-12">
+                        <input type="text" class="form-control" id="username" placeholder="Username">
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label for="plantname">Select a tree: </label>
+                        <select id="plantname" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>Amla</option>
+                            <option>Guava</option>
+                            <option>Peepal</option>
+                            <option>Reetha</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
 	<!-- Intro Section -->
     <section class="intro">
