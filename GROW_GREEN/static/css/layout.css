@@ -12,6 +12,7 @@ input[type=text], select, textarea {
   resize: horizontal;
 }
 
+
 input[type=submit] {
   background-color: #04AA6D;
   color: white;

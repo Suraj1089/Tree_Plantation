@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register plantree model in admin section
 
-from .models import PlantTree
+from .models import PlantaTree
 from django.utils.html import format_html
 
 class PlantTreeAdmin(admin.ModelAdmin):
@@ -18,4 +18,4 @@ class PlantTreeAdmin(admin.ModelAdmin):
     list_display_links = ('username','tree_name')
     # list_editable = ('is_featured',)
 
-admin.site.register(PlantTree, PlantTreeAdmin)
+admin.site.register(PlantaTree, PlantTreeAdmin)

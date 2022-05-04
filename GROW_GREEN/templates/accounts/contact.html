@@ -1,26 +1,64 @@
 
 {% extends 'base.html' %}
-{% load static %}
+
 {% block content %}
+<div class="container">
+  <form method="POST" action="{% url 'contact_growgreen' %}">
+  {% csrf_token %}
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="user_email">Email   </label>
+    <input type="email" id="user_email" name="user_email" placeholder="Your Email..">
+
+    <label for="state">State</label>
+    <select id="state" name="State">
+            <option value="ANP">Andhra Pradesh</option>
+            <option value="ARU">Arunachal Pradesh</option>
+            <option value="ASS">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="CHH">Chhattisgarh</option>
+            <option value="GOJ">Gujarat</option>
+            <option value="GOA">Goa</option>
+            <option value="HAR">Haryana</option>
+            <option value="HIM">Himachal Pradesh</option>
+            <option value="JHA">Jharkhand</option>
+            <option value="MAH">Maharashtra</option>
+            <option value="KAR">Karnataka</option>
+            <option value="KER">Kerala</option>
+            <option value="MAD">Madhya Pradesh</option>
+        
+    </select>
+
+    <label for="usermessage">Message</label>
+    <textarea id="usermessage" name="usermessage" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+  {% for message in messages  %}
+    <h1>{{message.success}}</h1>
+  {% endfor %}
+</div>
 
 
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
-
+/* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
-  width: 48%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 1px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: horizontal;
+  width: 100%; /* Full width */
+  padding: 6px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
+/* Style the submit button with a specific background color etc */
 input[type=submit] {
   background-color: #04AA6D;
   color: white;
@@ -30,57 +68,20 @@ input[type=submit] {
   cursor: pointer;
 }
 
+/* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
   background-color: #45a049;
 }
 
+/* Add a background color and some padding around the form */
 .container {
   border-radius: 5px;
-  background-color: #f2f2f2 width:30%;
+  background-color: #f2f2f2;
   padding: 20px;
 }
-
-
 </style>
-</head>
-<body>
 
-<h3>Contact Form</h3>
-
-<div class="container">
-  <form method="POST" action="">
-    <div class="form-group">
-      <label class="active" jfor="fname">First Name<br></label>
-      <input type="text" id="fname" name="firstname" placeholder="First Name">
-    </div>
-
-    <div class="form-group">
-      <label for="lname"><br>Last Name<br></label>
-      <input type="text" id="lname" name="lastname" placeholder="Last Name">
-    </div>
-
-    <div class="form-group">
-      <label for="lemail"><br>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></label>
-      <input type="text" id="email" name="Email" placeholder="Email">
-    </div>
-
-    <div class="form-group">
-      <label for="country">Country&nbsp;&nbsp;&nbsp;&nbsp;</label>
-      <select id="country" name="country">
-        <option value="None">None</option>
-        <option value="India">India</option>
-        <option value="Other">Other...</option>
-    </select>
-    </div>
-
-    <div class="form-group">
-      <label for="subject">Subject&nbsp;&nbsp;&nbsp;</label>
-      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" ></textarea>
-    </div>
-
-    <br><input type="submit" value="Submit">
-  </form>
-</div>
-
-</body>
 {% endblock content %}
+
+
+

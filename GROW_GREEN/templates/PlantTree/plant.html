@@ -100,32 +100,50 @@
             </div>
             <div class="modal-body">
               
-                <form>
+                <form method="POST" action="{% url 'plant_tree' %}">
+                {% csrf_token %}
                     <div class="form-group col-md-12">
-                        <input type="text" class="form-control" id="username" placeholder="Username">
+                        <input type="text" name="username" class="form-control" id="username" placeholder="username">
                     </div>
 
                     <div class="form-group col-md-12">
-                        <label for="plantname">Select a tree: </label>
-                        <select id="plantname" class="form-control">
-                            <option selected>Choose...</option>
-                            <option>Amla</option>
+                        <input type="text" name="firstname" class="form-control" id="firstname" placeholder="firstname">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input type="text" name="lastname" class="form-control" id="lastname" placeholder="lastname">
+                    </div>
+
+                    <div class="form-group col-md-12" name="treename">
+                        <label for="plantname" name="treename">Select a tree: </label>
+                        <select id="plantname" class="form-control" name="treename">
+                            <option selected name="treename">Choose...</option>
+                            <option>Neem</option>
                             <option>Guava</option>
                             <option>Peepal</option>
-                            <option>Reetha</option>
+                            <option>Banyan</option>
+                            <option>Banyan</option>
                         </select>
                     </div>
+                
+                    <div class="form-group col-md-12">
+                        <label for="treeimg">Image</label>
+                        <input type="file" id="treeimg" name="Image">
+                    </div>
 
+                    <div class="form-group col-md-12">
+                        <label for="treeinto">Tree Infomration</label>
+                        <input type="text" id="treeinto" name="treeinto">
+                    </div>
                     <div class="form-group col-md-12">
                         <label for="date">Date</label>
                         <input type="date" id="date" name="date">
                     </div>
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Plant Tree</button>
+                </div>
                 </form>
 
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
             </div>
           </div>
         </div>

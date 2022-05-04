@@ -1,9 +1,15 @@
 
+from curses import use_env
+from multiprocessing import context
+from django.forms import EmailInput
+from django.http import HttpResponse
 from django.shortcuts import render,redirect
 from django.contrib.auth import logout
 from django.contrib.auth.models import User
 from django.contrib import messages,auth
 from django.contrib.auth.decorators import login_required
+from .models import ContactGrowGreen
+from .forms import ContactGrowGreenForm
 
 
 def register(request):
@@ -91,3 +97,25 @@ def about(request):   #function for sign in user
 
 def contact(request):
     return render(request, 'accounts/contact.html')
+
+
+
+def contact_growgreen(request):
+    # return render(request,'accounts/contact.html')
+    if request.method == 'POST':
+        first_name = request.POST['firstname']
+        last_name = request.POST['lastname']
+        user_email = request.POST['user_email']
+        user_state = request.POST['State']
+        user_message = request.POST['usermessage']
+        
+        contact_user = ContactGrowGreen(first_name=first_name,last_name=last_name,user_email=user_email,user_state=user_state,user_message=user_message)
+        contact_user.save()
+        
+        messages.success(request,"thank you for contacting us our representative get touch with you soon!!")
+        return redirect('home')
+
+    else:
+        return render(request,'accounts/contact.html')
+        
+    
