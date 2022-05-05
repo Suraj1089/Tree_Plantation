@@ -22,7 +22,7 @@ def footer(request):
 def test(request):
     return render(request, 'PlantTree/index.html')
 
-@login_required
+
 
 def plant_ui(request):
     return render(request, 'PlantTree/plant.html')
