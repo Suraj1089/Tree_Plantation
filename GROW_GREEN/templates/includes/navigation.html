@@ -4,7 +4,7 @@
 
   {% comment %} <link rel="stylesheet" href="./css/navbarr.css"> {% endcomment %}
 </head>
-<nav class="  navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="  navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
           
     <a class="navbar-brand" href="#">
         <div id="growgreen">
@@ -23,17 +23,59 @@
         <li class="nav-item active">
           <a class="nav-link"  href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
+        {% comment %} <li class="nav-item">
           <a class="nav-link"  href={% url 'about' %}>About Us</a>
-        </li>
+        </li> {% endcomment %}
+        
         <li class="nav-item">
           <a class="nav-link" href="{% url 'plant_ui' %}">Plant Tree</a>
         </li>
-        <li class="nav-item">
+        {% comment %} <li class="nav-item">
           <a class="nav-link" href="#">Services</a>
+        </li> {% endcomment %}
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href= "#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Services
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Plant Single Tree</a>
+            <div class="dropdown-divider"></div>
+             <a class="dropdown-item" href="#">Plant Multiple Tree</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Plant With Us</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Donate</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href= {% url 'about' %} id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            About Us
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">About Grow Green </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Become an Member</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Grow Green Participants</a> 
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Mission and Vision</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" id="media" href="#">Media Support<a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" id="team" href="#">Our Team</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Our Journey</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Gallery</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Sponsors</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Research and Developement</a>
+          </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href={% url 'contact_growgreen' %}>Contact</a>
+          <a class="nav-link" href={% url 'contact_growgreen' %}>Contact Us</a>
         </li>
         <header class="header " >
             
@@ -50,6 +92,23 @@
     
             
       </header>
+      <li class="nav-item dropdown">
+        <img id ="imgmenu" src="{% static 'images/menu.png' %}" width="30" height="30" alt="">
+
+        <a class="nav-link dropdown-toggle" id = "Menu" href= "#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Menu
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Contact</a>
+          <div class="dropdown-divider"></div>
+           <a class="dropdown-item" href="#">FAQs</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Privacy</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Terms and Conditions</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Career</a>
+      </li>
       </ul>
     </div>
     
@@ -73,7 +132,7 @@
         transition: all 0.5s ease-in-out;
       }
       #headersign{
-        margin-left: 100px;
+        margin-left: 90px;
         padding: 2px;
         padding-left: 15px;
         padding-right: 15px;
@@ -85,7 +144,7 @@
 
       }
       #headersignout{
-        margin-left: 15px;
+        margin-left: 12px;
         padding: 2px;
         padding-left: 15px;
         padding-right: 15px;
@@ -110,5 +169,22 @@
         border-radius: 0px;
 
       }
+     .dropdown-divider{
+       margin-top: 1px;
+       margin-bottom: 1px;
+     }
+#media{
+margin-bottom: -26px;
+}
+#team{
+  margin-top: -20px;
+}
+#Menu{
+  margin-left: 75px;
+  margin-top: -35px;
+}
+#imgmenu{
+  margin-left: 40px;
+}
 
   </style>
