@@ -18,4 +18,4 @@ class PlantTreeAdmin(admin.ModelAdmin):
     list_display_links = ('username','tree_name')
     # list_editable = ('is_featured',)
 
-admin.site.register(PlantaTree, PlantTreeAdmin)
+admin.site.register(PlantaTree,PlantTreeAdmin)
