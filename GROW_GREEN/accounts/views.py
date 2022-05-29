@@ -119,3 +119,6 @@ def contact_growgreen(request):
         return render(request,'accounts/contact.html')
         
     
+    
+def test_website(request):
+    return render(request,'test.html')

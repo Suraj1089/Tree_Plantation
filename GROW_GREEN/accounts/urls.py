@@ -9,4 +9,5 @@ urlpatterns = [
     path('dashboard',views.dashboard, name='dashboard'),  #url for logout
     path('about',views.about, name='about'),  #url for logout
     path('contact',views.contact_growgreen, name='contact_growgreen'),  #url for logout
+    path('test',views.test_website,name='test_website')
 ]
