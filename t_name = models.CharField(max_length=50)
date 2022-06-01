@@ -1,0 +1,554 @@
+[33mcommit dbc6d1442eaba17dcaaafed7bc464bfeb1eb47b9[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Sun May 29 12:29:34 2022 +0530
+
+    test.html and test.css file created to create new user dashobard
+
+[33mcommit d8df61df6edd52cbc68e3b82dbe46cf952883664[m
+Author: Rasika Ghadge <90198493+rasikaghadge@users.noreply.github.com>
+Date:   Fri May 13 20:25:56 2022 +0530
+
+    signout/dashboard button repair and signin button color
+
+[33mcommit 4b8b9e61d4ef04279211a4dfe5f4a053f449dc0f[m
+Merge: c54f2c7 7c8ea9b
+Author: pradnya-barve <89647519+pradnya-barve@users.noreply.github.com>
+Date:   Fri May 13 15:58:02 2022 +0530
+
+    Merge pull request #18 from pradnya-barve/pages
+    
+    Footer Changed
+
+[33mcommit 7c8ea9bb309001ff168a2a8f07af016bb30bd15b[m
+Author: pradnya <pradnnya24@gmail.com>
+Date:   Fri May 13 15:57:26 2022 +0530
+
+    Footer Changed
+
+[33mcommit c54f2c7c6a22b1f351fbc2c9a6167ab5e61d781f[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Thu May 12 21:46:03 2022 +0530
+
+    two classes for managing home page content are added in WebPageConent/models
+
+[33mcommit 87df70abf20de959b655f1d84996cbc9a308aeaf[m
+Author: Kalpesh Pawar <kalpeshpawar7875@gmail.com>
+Date:   Mon May 9 19:01:00 2022 +0530
+
+    navbar Dropdown
+
+[33mcommit 750850e9b212d6aec0159c862ee6657585a2f5db[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Mon May 9 13:40:07 2022 +0530
+
+    working
+
+[33mcommit 66a3183bb6d09d39809abeddb700cb0e2e53ee9b[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Mon May 9 13:39:48 2022 +0530
+
+    working
+
+[33mcommit ad70f4f8b07c7bae654b998bda28357e1a954262[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Thu May 5 21:01:17 2022 +0530
+
+    Three apps are created
+    
+    Three apps are created:
+    AboutGrowGreen:
+    to manage about section of Grow_green
+    GrowGreenServies:
+    services offered by grow_green
+    WebpageContent:
+    to mange website content dynamically
+
+[33mcommit cd417ad4662648b1c64438ada2e1b52d2f7d08cd[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Wed May 4 07:26:45 2022 +0530
+
+    working tree plant button
+
+[33mcommit 5ae05e3c3b56ed48c9e4a032133c6e8757ff5b6c[m
+Merge: 04a2b00 b92cef2
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Tue May 3 16:27:31 2022 +0530
+
+    Merge branch 'master' of https://github.com/Suraj1089/Tree_Plantation
+
+[33mcommit b92cef255d0aaf9e0f489c64d9cf21b47a57f3e2[m
+Author: Rasika Ghadge <90198493+rasikaghadge@users.noreply.github.com>
+Date:   Tue May 3 16:21:44 2022 +0530
+
+    Contact us form updated
+
+[33mcommit 7e531d99211195da2329e87d1c6f6746c9095891[m
+Author: Rasika Ghadge <90198493+rasikaghadge@users.noreply.github.com>
+Date:   Tue May 3 16:10:46 2022 +0530
+
+    About page updated
+
+[33mcommit 04a2b00f27f0e98159f89efcb93ebff61eb84da8[m
+Merge: fbe205d 4fe67c0
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Tue May 3 15:54:48 2022 +0530
+
+    Merge branch 'master' of https://github.com/Suraj1089/Tree_Plantation
+
+[33mcommit 4fe67c01f0f5bace0dbc3d141e60e1b138f11f22[m
+Author: Rasika Ghadge <90198493+rasikaghadge@users.noreply.github.com>
+Date:   Tue May 3 15:40:36 2022 +0530
+
+    plant a tree modal added
+
+[33mcommit fbe205d5869a76617439f1689d6646b4d020a021[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Tue May 3 15:23:02 2022 +0530
+
+    Update base.html
+
+[33mcommit aef0c9e42f49f4c2bcc0e2e3266959233beba807[m
+Author: Rasika Ghadge <90198493+rasikaghadge@users.noreply.github.com>
+Date:   Tue May 3 15:13:23 2022 +0530
+
+    navba repair
+
+[33mcommit 805885132cf08f26b2979b2b823ac8f9c62c26e6[m
+Author: rasikaghadge <ghadgerasika16@gmail.com>
+Date:   Tue May 3 12:45:15 2022 +0530
+
+    Changes in navbar and footer
+
+[33mcommit 960dad773ec075ab558d8e1338390c3ea263b4d3[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Tue May 3 11:37:37 2022 +0530
+
+    mysqlclient==2.1.0
+    
+    mysqlclient==2.1.0 change in requirement.txt
+
+[33mcommit c84c152a4bc8abdc6b6730e9ce7716bab1db9dc3[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Tue May 3 11:21:16 2022 +0530
+
+    pbl changes in proposed sytem and problem description
+
+[33mcommit cd0d701117818da60562ef784876944009a3a468[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Mon May 2 23:20:14 2022 +0530
+
+    all things working Pbl presentatio added
+
+[33mcommit 63327fc50f26ec5371c148b9ff1d5828b77b06fb[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Mon May 2 23:15:27 2022 +0530
+
+    pbl project added
+
+[33mcommit fb5e4150e43cbd65666c3582123ae90d42d63f99[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Mon May 2 15:42:01 2022 +0530
+
+    working all things
+
+[33mcommit 2ce833c07b27e7948cf2de5f0268976dcbdca29d[m
+Author: Kalpesh Pawar <kalpeshpawar7875@gmail.com>
+Date:   Sun May 1 22:29:06 2022 +0530
+
+    commit
+
+[33mcommit 8b25d7c2f0bebfefd3d3bbe3061d3b72b6cdd2fe[m
+Merge: d9bdc74 4066612
+Author: Kalpesh Pawar <kalpeshpawar7875@gmail.com>
+Date:   Sun May 1 10:37:53 2022 +0530
+
+    committed
+
+[33mcommit d9bdc74c0eb3bc72e01fc1cf3d191af3d1b8c225[m
+Author: Kalpesh Pawar <kalpeshpawar7875@gmail.com>
+Date:   Sun May 1 10:31:05 2022 +0530
+
+    commited
+
+[33mcommit 406661294fc2e294c7a4bcf700d70811d3850609[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Sun May 1 09:53:17 2022 +0530
+
+    logo added
+
+[33mcommit c1514f8ed2868b6574e9b5b0a5c6b707dbb82353[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Sat Apr 30 17:38:44 2022 +0530
+
+    presentation ppt content added
+
+[33mcommit 61ac30cad73e60109105bf7c176fccbdb947a535[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Sat Apr 30 17:06:16 2022 +0530
+
+    pbl presentation ppt added
+
+[33mcommit 5e77ffff6bad04918c19678265f9669ce0cc48e3[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Thu Apr 28 21:10:33 2022 +0530
+
+    .env file create to store passwords and usernames
+
+[33mcommit 1485e3eb8204c88a7e1f30a255779b3fabc76401[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Thu Apr 28 20:47:26 2022 +0530
+
+    tree_planted_images folder location change
+
+[33mcommit cc934cb25f7ce6a2272ac27852d8028b71f439d3[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Thu Apr 28 14:23:01 2022 +0530
+
+    solve
+
+[33mcommit 2d26bd494bac475dfd0b4aa9c3f860cb49035fd6[m
+Author: Kalpesh Pawar <kalpeshpawar7875@gmail.com>
+Date:   Wed Apr 27 18:47:58 2022 +0530
+
+    Comitted
+
+[33mcommit b839dd87c016a2b7f36ae2ffea1a1a7ed12fa05f[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Wed Apr 27 18:22:42 2022 +0530
+
+    plant tree backend setup completed
+
+[33mcommit 94bc2477b4bedaad6bcb2008ffe81b47846f59ec[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Sat Apr 23 10:26:26 2022 +0530
+
+    plant tree ui created
+
+[33mcommit b4736c81b616c4f5a05144aed669e34ad6c09663[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Fri Apr 22 12:59:12 2022 +0530
+
+    model plantTree registered on admin panel
+
+[33mcommit 6b28ba2b100622427aabaea839af91104a943e50[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Sun Apr 17 14:33:07 2022 +0530
+
+    plant tree model created, tree image chnages
+
+[33mcommit de3eb13cef68263fb88b2555ee88465d21893ecc[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Fri Apr 15 11:52:49 2022 +0530
+
+    google login working
+
+[33mcommit bcf593c1d0600452a7b6f661051798327e13f099[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Wed Apr 13 19:02:52 2022 +0530
+
+    login image added
+
+[33mcommit d0db9a55e7a82d1575c9cc4cc35d149a461da023[m
+Merge: 6360784 4d92efb
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Sat Apr 9 20:52:10 2022 +0530
+
+    facebook login created
+
+[33mcommit 6360784e93f627873d027301c86903af94b564cd[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Sat Apr 9 13:07:15 2022 +0530
+
+    login feature working
+
+[33mcommit e9dc4bd62666d31c178dd8eed00913c6d2933bc1[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Sat Apr 9 13:03:11 2022 +0530
+
+    login feature is working
+
+[33mcommit 4d92efb04d45670a4b15bcef6236310262de4db0[m
+Merge: ffc4160 9cecaa5
+Author: pradnya-barve <89647519+pradnya-barve@users.noreply.github.com>
+Date:   Sat Apr 9 11:07:28 2022 +0530
+
+    Merge pull request #9 from pradnya-barve/pages
+    
+    changes
+
+[33mcommit 9cecaa5508a9e36d6b1305b2adf285b53bd6c880[m
+Author: pradnya <pradnnya24@gmail.com>
+Date:   Sat Apr 9 11:06:44 2022 +0530
+
+    changes
+
+[33mcommit ffc416030509e91402e3d7c429e3c6493cbb2ba6[m
+Merge: 9ad67c7 0436be9
+Author: pradnya-barve <89647519+pradnya-barve@users.noreply.github.com>
+Date:   Sat Apr 9 09:17:33 2022 +0530
+
+    Merge pull request #8 from pradnya-barve/pages
+    
+    Changes
+
+[33mcommit 0436be9512e61f9ea692f2240e6f9743822cf099[m
+Author: pradnya <pradnnya24@gmail.com>
+Date:   Sat Apr 9 09:16:26 2022 +0530
+
+    Changes
+
+[33mcommit 9ad67c7a8fd741e6182ff20fb785094b059a870d[m
+Merge: c040f71 a648fa6
+Author: pradnya-barve <89647519+pradnya-barve@users.noreply.github.com>
+Date:   Fri Apr 8 20:36:32 2022 +0530
+
+    Merge pull request #7 from pradnya-barve/pages
+    
+    Contact Page
+
+[33mcommit a648fa61a463f760eff75a536bee639a8b22d0ca[m
+Author: pradnya <pradnnya24@gmail.com>
+Date:   Fri Apr 8 20:31:47 2022 +0530
+
+    Contact Page
+
+[33mcommit c040f719c2118e0f2819a9870d3fcb1b5d317e66[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Fri Apr 8 19:36:35 2022 +0530
+
+    signup form working
+
+[33mcommit 2752d4698d6160f1c3a5a5efb5e44b6d513daa16[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Fri Apr 8 08:44:20 2022 +0530
+
+    all buttons are configured with their specific url ex. clicking on singup redirects to register page
+
+[33mcommit fffc9cfb80707ff9fdf705be300661d3e9b526ea[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Fri Apr 8 07:56:30 2022 +0530
+
+    register.html, login.html, dashboard.html html structure created
+
+[33mcommit 0bd2ade9167885864587a94339c13922a914349f[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Thu Apr 7 23:16:29 2022 +0530
+
+    register page created. view at accounts/register
+
+[33mcommit 6a013f6d3d0bf57094aa53f529dfa57b6a3b69ba[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Wed Apr 6 22:31:30 2022 +0530
+
+    readme file updated
+
+[33mcommit 10263773424ac6ac9a0ac95d05353172caf645b2[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Tue Apr 5 07:41:24 2022 +0530
+
+    minor change
+
+[33mcommit 5d7b2ae409464081837085b5f5601e81455fbbcb[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Wed Mar 30 08:12:53 2022 +0530
+
+    presentation ppt added
+
+[33mcommit b3cee2d973884c233456fcb6cddd29b0c0e2fb52[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Thu Mar 24 20:10:08 2022 +0530
+
+    SRS_DOCUMENT modified hardware and software requrement added
+
+[33mcommit 6c0b0230561976c61326c155dbab065f0626f6fd[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Thu Mar 24 18:45:44 2022 +0530
+
+    readme.md file updated
+
+[33mcommit d543069d15f0d6f0cf216b193b713aeef07c94cf[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Thu Mar 24 18:40:49 2022 +0530
+
+    change in static, slider images changes separate files crated for header, footer, navabar basic funtion added to views.py to check code is working or not
+
+[33mcommit 981bdecd6f161d60c2c15e572932208fce367c5e[m
+Merge: a827ea9 2973d9f
+Author: Rasika Ghadge <90198493+rasikaghadge@users.noreply.github.com>
+Date:   Tue Mar 22 20:12:49 2022 +0530
+
+    Merge pull request #4 from rasikaghadge/modal
+    
+    Login signup modal
+
+[33mcommit 2973d9f171e6b089c719532621abaf8b4998866a[m
+Author: rasikaghadge <ghadgerasika16@gmail.com>
+Date:   Tue Mar 22 20:11:55 2022 +0530
+
+    Login/Singup Modal Update 2
+
+[33mcommit b53cd666bce3cf63aa12a54941f4c77f02b75582[m
+Merge: 2285ed6 a827ea9
+Author: rasikaghadge <ghadgerasika16@gmail.com>
+Date:   Tue Mar 22 19:12:06 2022 +0530
+
+    Merge branch 'master' of https://github.com/Suraj1089/Tree_Plantation into modal
+
+[33mcommit a827ea9dfea959ab48b24d47f056142e484d9290[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Tue Mar 22 09:08:49 2022 +0530
+
+    change in setting.py and static folder
+
+[33mcommit 034a32e0344f2b290a8f399cc9c5c483e6be7814[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Tue Mar 22 08:30:29 2022 +0530
+
+    static folder configured
+
+[33mcommit 2285ed6b2e32d6bcc67baf7ca58d1668467cdaa7[m
+Merge: 3832e76 f62cb28
+Author: Rasika Ghadge <90198493+rasikaghadge@users.noreply.github.com>
+Date:   Mon Mar 21 20:00:46 2022 +0530
+
+    Merge pull request #3 from rasikaghadge/modal
+    
+    Login/Signup Modal Update 1
+
+[33mcommit f62cb288d923b6decc3c2c60f863c2f7a8504f49[m
+Author: rasikaghadge <ghadgerasika16@gmail.com>
+Date:   Mon Mar 21 19:58:56 2022 +0530
+
+    Login/Signup Modal Update 1
+
+[33mcommit cf3515fdfbfbb9fde23fefcaeaf37f723f5abf1c[m
+Author: rasikaghadge <ghadgerasika16@gmail.com>
+Date:   Mon Mar 21 18:43:26 2022 +0530
+
+    Minor changes to base.html
+
+[33mcommit 3832e76759971adc6e0a790540b708145cc95f21[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Sun Mar 20 06:29:22 2022 +0530
+
+    srs document added
+
+[33mcommit 48fc482fea47254fba75a9225e27856337165c41[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Sun Mar 20 06:24:08 2022 +0530
+
+    fix in navabar, code separated into different files
+
+[33mcommit ff00c90e601179070ac6c9f359fb8768015047cc[m
+Merge: e3ae22c 76d85c2
+Author: Rasika Ghadge <90198493+rasikaghadge@users.noreply.github.com>
+Date:   Sat Mar 19 20:29:13 2022 +0530
+
+    Merge pull request #2 from rasikaghadge/organizing
+    
+    Added separate code of navbar and footer
+
+[33mcommit 76d85c276329c82503f145c1f1feb8bf35bfbc50[m
+Author: rasikaghadge <ghadgerasika16@gmail.com>
+Date:   Sat Mar 19 20:26:59 2022 +0530
+
+    Added separate code of navbar and footer
+
+[33mcommit e3ae22c773f74ea0d360aaf189ea0473c09f8d65[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Sat Mar 19 07:49:11 2022 +0530
+
+    fix in venv, requirement.txt updated
+
+[33mcommit f5b9e560eb776d76da6bb6b0a2657275ab36f379[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Sat Mar 19 06:54:42 2022 +0530
+
+    scripts.js file added
+
+[33mcommit a9cb155c27a34e79fb85038f6cdffcc87695d773[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Sat Mar 19 06:53:07 2022 +0530
+
+    css moved to static
+
+[33mcommit 32fddb77f3cb3406f78a5bf103d58f6f962cc714[m
+Merge: 4fd5b60 4a11fec
+Author: Rasika Ghadge <90198493+rasikaghadge@users.noreply.github.com>
+Date:   Fri Mar 18 23:07:45 2022 +0530
+
+    Merge pull request #1 from rasikaghadge/branch1
+    
+    Navbar First Commit
+
+[33mcommit 4a11fece95357ac332fbc239b9f846a7c0a88231[m
+Author: rasikaghadge <ghadgerasika16@gmail.com>
+Date:   Fri Mar 18 23:03:50 2022 +0530
+
+    Navbar First Commit
+
+[33mcommit 4fd5b60ee643ed87ebd15098d42d101124934ff5[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Fri Mar 18 11:31:45 2022 +0530
+
+    change in base.html
+
+[33mcommit 9f430c1f403a0e78acc37da26169a2b4809421a6[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Fri Mar 18 11:21:32 2022 +0530
+
+    base.html modified
+
+[33mcommit 27f1961634a81fe3302eb8a50fb22d3c0bce14ae[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Fri Mar 18 07:46:34 2022 +0530
+
+    .gitignore file added
+
+[33mcommit c4d333959be6c7c727b16afbce3d991358846279[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Fri Mar 18 07:39:32 2022 +0530
+
+    .gitignore file added
+
+[33mcommit 16801aa8164ffa8e0b7c513e8beb11de1d4f4a79[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Fri Mar 18 07:08:07 2022 +0530
+
+    readme file added
+
+[33mcommit 7896d9a51c2f742bd204927639035ce4be0af3b4[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Fri Mar 18 07:05:06 2022 +0530
+
+    files created
+
+[33mcommit ad45465fff9fd20254214c7e8cfc162ba6906178[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Fri Mar 18 06:48:15 2022 +0530
+
+    setting changes
+
+[33mcommit f471a65a7388225cb7152b3fc8ff408fb80ed648[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Thu Mar 17 17:37:21 2022 +0530
+
+    change in setting
+
+[33mcommit 9260c32a779473d2987e659e949356e1710d6ea6[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Thu Mar 17 17:24:42 2022 +0530
+
+    templates folder added
+
+[33mcommit 8e25d43c35c75f0fc273f7bc99b858f36a90b73d[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Thu Mar 17 16:54:03 2022 +0530
+
+    planttree app created
+
+[33mcommit d831ee3e31661fb0078208abd6400e46d41be84e[m
+Author: Suraj Pisal <surajpisal113@gmail.com>
+Date:   Thu Mar 17 16:39:21 2022 +0530
+
+    Inital commit
