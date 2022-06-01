@@ -1,7 +1,7 @@
 
 from django.shortcuts import render,redirect
 from django.contrib.auth.decorators import login_required
-
+# from GROW_GREEN import settings
 from .models import PlantaTree
 
 # Create your views here.
@@ -35,11 +35,14 @@ def plant_tree(request):
         last_name = request.POST['lastname']
         tree_name = request.POST['treename']
         date = request.POST['date']
-        tree_pictures = request.POST['Image']
+        # tree_pictures = request.POST['Image']
+        tree_pictures = request.FILES.get('Image')
         tree_description = request.POST['date']
         
+        # points = settings.
         
-        plat_tree = PlantaTree(first_name=first_name, last_name=last_name,username=user_name,tree_name=tree_name,tree_pictures=tree_pictures,tree_description=tree_description)
+        plat_tree = PlantaTree(first_name=first_name, last_name=last_name,username=user_name,
+                               tree_name=tree_name,tree_pictures=tree_pictures,tree_description=tree_description)
         
         plat_tree.save()
         

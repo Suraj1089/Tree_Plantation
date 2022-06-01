@@ -30,7 +30,7 @@ class PlantaTree(models.Model):
     username = models.CharField(max_length=50)
     tree_name = models.CharField(max_length=100, choices=tree_choices)
     tree_planted_date = models.DateTimeField(auto_now_add=True)
-    tree_pictures = models.ImageField(upload_to='static/tree_planted_images/ %Y/ %m/ %d/')
+    tree_pictures = models.ImageField(upload_to='media/treePlantedImages/ %Y/ %m/ %d/')
     tree_description = models.TextField(default=tree_name)
     points = models.PositiveIntegerField(default=0,verbose_name='points')
     

@@ -15,18 +15,19 @@ class HomeContent(models.Model):
     """
     slider_title = models.CharField(max_length=100)
     slider_title_descripiton = models.CharField(max_length=400)
-    slider_images = models.ImageField(upload_to='static/slider_images/ %Y/ %m/ %d/')
+    slider_images = models.ImageField(upload_to='media/sliderImages/ %Y/ %m/ %d/')
     tree_plantation_map_title = models.CharField(max_length=100)
-    tree_plantation_map_image = models.ImageField(upload_to='static/slider_images/ %Y/ %m/ %d/')
-    # upload_to='static/tree_planted_images/ %Y/ %m/ %d/'
+    tree_plantation_map_image = models.ImageField(upload_to='media/sliderImages/ %Y/ %m/ %d/')
 
+    
     def __str__(self):
         return self.slider_title_descripiton
+
 
 class HomePageTrees(models.Model):
     tree_name = models.CharField(max_length=50)
     tree_details = models.CharField(max_length=200)
-    tree_image = models.ImageField(upload_to='static/tree_planted_images/ %Y/ %m/ %d/')
+    tree_image = models.ImageField(upload_to='media/treePlantedImages/ %Y/ %m/ %d/')
 
 
     def __str__(self):
