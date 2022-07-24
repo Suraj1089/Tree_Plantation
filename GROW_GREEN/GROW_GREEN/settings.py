@@ -28,7 +28,9 @@ env = environ.Env()
 environ.Env.read_env()
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY',default='unsafe-secret-key')
+# SECRET_KEY = env('SECRET_KEY',default='unsafe-secret-key')
+
+SECRET_KEY = 'ma@n!+g7skw)r1p2=#hi&#)t!=5xvzuueu8q%_18+f+mqd0&g-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -41,6 +43,7 @@ LOGIN_REDIRECT_URL = 'dashboard'
 
 INSTALLED_APPS = [
     #add newly created apps in the form of appname.apps.appnameconfig
+    'chatbot.apps.ChatbotConfig',
     'AboutGrowGreen.apps.AboutgrowgreenConfig',
     'GrowGreenServices.apps.GrowgreenservicesConfig',
     'WebPageContent.apps.WebpagecontentConfig',
@@ -108,9 +111,9 @@ DATABASES = {
     # databae name=grow_green
 	'default': {
 		'ENGINE': 'django.db.backends.mysql',
-		'NAME': env('DATABASE_NAME'),
-		'USER': env('DATABASE_USER'),
-		'PASSWORD': env('DATABASE_PASS'),
+		'NAME': 'grow_green',
+		'USER': 'root',
+		'PASSWORD': 'MySQLSuraj@123',
 		'HOST':'',
 		'PORT':'',
 	}

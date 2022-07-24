@@ -1,0 +1,15 @@
+#virtual envirorment 
+.venv
+venv/
+.include
+.lib
+.Scripts
+.pyvenv.cfg 
+venv
+__pycache__
+._pycache_/
+__pycache__/
+_pycache_/
+.idea/
+/.idea/
+../.idea/
