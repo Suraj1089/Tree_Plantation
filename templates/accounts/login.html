@@ -1,0 +1,49 @@
+ {% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+  {% load socialaccount %}
+  {% providers_media_js %}
+   <main id="logincontainer" class="login container text-center ">
+    <h1 class="text-center mt-5 mb-5 animate__animated animate__slideInDown">
+      Login
+    </h1>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{% static './assets/images/login-image.png' %}" class="img-fluid" alt="img">
+      </div>
+        <div class="login-form col-md-6">
+          <form method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            <div class="form-group">
+              <input name="username" class="form-control" placeholder="User Name" required> 
+            </div>
+
+            <div class="form-group">
+              <input name="password" type="password" class="form-control" placeholder="Password" required>
+            </div>
+
+        <p>Don't have an account?<a href="{% url 'register' %}"> SignUp </a>now! </p>
+            <button type="submit" id = "btnSignin" class="btn btn-success form-btn w-100 mt-3 mb-3">Signin</button>
+            {% comment %} <div class="text-center">
+              OR
+            </div>
+
+            <a href="{% provider_login_url 'facebook' method='oauth2' %}" class="btn btn-primary form-btn w-100 mt-3">Facebook</a>
+            <a href="{% provider_login_url 'google' %}" class="btn btn-accent form-btn w-100 mt-3 mb-3">Google</a> {% endcomment %}
+
+          </form>
+      </div>
+    </div>
+    <style>
+      #logincontainer {
+        background-color: white;
+      }
+
+    </style>
+  </main>
+
+
+
+{% endblock %} 
+
