@@ -43,9 +43,7 @@ LOGIN_REDIRECT_URL = 'dashboard'
 
 INSTALLED_APPS = [
     #add newly created apps in the form of appname.apps.appnameconfig
-    'chatbot.apps.ChatbotConfig',
     'AboutGrowGreen.apps.AboutgrowgreenConfig',
-    'GrowGreenServices.apps.GrowgreenservicesConfig',
     'accounts.apps.AccountsConfig',
     'PlantTree.apps.PlanttreeConfig',
     'django.contrib.admin',
