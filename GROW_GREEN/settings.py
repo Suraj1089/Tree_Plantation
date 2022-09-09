@@ -14,7 +14,9 @@ from pathlib import Path
 # from pickle import TRUE
 from telnetlib import AUTHENTICATION
 from datetime import timedelta
-import environ  # imported for hiding passwords from remote repository
+import dj_database_url
+# from decouple import config
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,18 +25,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # initialising environ
-env = environ.Env()
-environ.Env.read_env()
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = env('SECRET_KEY',default='unsafe-secret-key')
 
-SECRET_KEY = 'ma@n!+g7skw)r1p2=#hi&#)t!=5xvzuueu8q%_18+f+mqd0&g-'
+SECRET_KEY = 'ed3f225796289a0c49a99dc275962e61975a35ad76e99ed2'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1','groww-green.herokuapp.com']
 
 LOGIN_REDIRECT_URL = 'dashboard'
 # used to redirect user when login through facebook or google
@@ -42,6 +44,7 @@ LOGIN_REDIRECT_URL = 'dashboard'
 
 INSTALLED_APPS = [
     # add newly created apps in the form of appname.apps.appnameconfig
+    'whitenoise.runserver_nostatic',
     'accounts.apps.AccountsConfig',
     'PlantTree.apps.PlanttreeConfig',
     'django.contrib.admin',
@@ -64,6 +67,7 @@ INSTALLED_APPS = [
 
 SITE_ID = 2
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -98,8 +102,6 @@ WSGI_APPLICATION = 'GROW_GREEN.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    # django database setup
-    # databae name=grow_green
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'grow-green',
@@ -109,6 +111,11 @@ DATABASES = {
         'PORT': '',
     }
 }
+
+# DATABASES = { 'default' : dj_database_url.config()}
+
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
@@ -153,7 +160,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'GROW_GREEN/static')
 ]
 
-# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 # Default primary key field type
