@@ -1,1 +1,1 @@
-web: gunicorn Grow_Green.wsgi --log-file -
+web: gunicorn GROW_GREEN.wsgi --log-file -
