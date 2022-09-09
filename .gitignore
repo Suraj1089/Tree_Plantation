@@ -9,6 +9,7 @@
 Icon
 
 .idea
+.idea/
 # Thumbnails
 ._*
 
@@ -80,13 +81,9 @@ target/
 
 ### Django ###
 *.log
-*.pot
 *.pyc
-__pycache__/
 local_settings.py
 
 .env
 db.sqlite3
-venv/
-venv
-migrations/
+env

@@ -14,16 +14,15 @@ from pathlib import Path
 # from pickle import TRUE
 from telnetlib import AUTHENTICATION
 from datetime import timedelta
-import environ  #imported for hiding passwords from remote repository
+import environ  # imported for hiding passwords from remote repository
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
-#initialising environ
+# initialising environ
 env = environ.Env()
 environ.Env.read_env()
 
@@ -38,11 +37,11 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 LOGIN_REDIRECT_URL = 'dashboard'
-#used to redirect user when login through facebook or google
+# used to redirect user when login through facebook or google
 # Application definition
 
 INSTALLED_APPS = [
-    #add newly created apps in the form of appname.apps.appnameconfig
+    # add newly created apps in the form of appname.apps.appnameconfig
     'accounts.apps.AccountsConfig',
     'PlantTree.apps.PlanttreeConfig',
     'django.contrib.admin',
@@ -52,17 +51,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    
-    #these provider are added to configure social media authentiation
+
+    # these provider are added to configure social media authentiation
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    
-    #provides
+
+    # provides
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
 ]
-
 
 SITE_ID = 2
 MIDDLEWARE = [
@@ -75,7 +73,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # 'django_auto_logout.middleware.auto_logout',# auto logout user
 ]
-    
 
 ROOT_URLCONF = 'GROW_GREEN.urls'
 
@@ -95,24 +92,22 @@ TEMPLATES = [
     },
 ]
 
-
 WSGI_APPLICATION = 'GROW_GREEN.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    #django database setup 
+    # django database setup
     # databae name=grow_green
-	'default': {
-		'ENGINE': 'django.db.backends.mysql',
-		'NAME': 'grow_green',
-		'USER': 'root',
-		'PASSWORD': 'MySQLSuraj@123',
-		'HOST':'',
-		'PORT':'',
-	}
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'grow-green',
+        'USER': 'postgres',
+        'PASSWORD': 'PostgresqlSuraj@123',
+        'HOST': '',
+        'PORT': '',
+    }
 }
 
 AUTHENTICATION_BACKENDS = [
@@ -138,7 +133,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
@@ -150,35 +144,34 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'GROW_GREEN/static')
+    os.path.join(BASE_DIR, 'GROW_GREEN/static')
 ]
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-#allauth configuration social login and email
+# allauth configuration social login and email
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
 ACCOUNT_UNIQUE_EMAIL = True
-ACCOUNT_LOGOUT_ON_GET= True
+ACCOUNT_LOGOUT_ON_GET = True
 # 1 day
 ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 3600
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
-#enable email scope to receive user’s email addresses after successful social login:
+# enable email scope to receive user’s email addresses after successful social login:
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'SCOPE': [
@@ -191,11 +184,10 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-#automatically logout the user
+# automatically logout the user
 AUTO_LOGOUT = {
     'IDLE_TIME': timedelta(minutes=5),
     'SESSION_TIME': timedelta(minutes=30),
     'MESSAGE': 'The session has expired. Please login again to continue.',
     'REDIRECT_TO_LOGIN_IMMEDIATELY': True,
 }
-
