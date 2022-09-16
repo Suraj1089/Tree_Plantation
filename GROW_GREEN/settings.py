@@ -12,9 +12,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 import django_heroku
 from pathlib import Path
-# from pickle import TRUE
-from telnetlib import AUTHENTICATION
-from datetime import timedelta
 import dj_database_url
 # from decouple import config
 
@@ -35,7 +32,7 @@ SECRET_KEY = 'ed3f225796289a0c49a99dc275962e61975a35ad76e99ed2'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1','groww-green.herokuapp.com']
 
@@ -168,36 +165,5 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# allauth configuration social login and email
-ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
-ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = "mandatory"
-ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
-ACCOUNT_UNIQUE_EMAIL = True
-ACCOUNT_LOGOUT_ON_GET = True
-# 1 day
-ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 3600
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True
-# enable email scope to receive user’s email addresses after successful social login:
-SOCIALACCOUNT_PROVIDERS = {
-    'google': {
-        'SCOPE': [
-            'profile',
-            'email',
-        ],
-        'AUTH_PARAMS': {
-            'access_type': 'online',
-        }
-    }
-}
-
-# automatically logout the user
-AUTO_LOGOUT = {
-    'IDLE_TIME': timedelta(minutes=5),
-    'SESSION_TIME': timedelta(minutes=30),
-    'MESSAGE': 'The session has expired. Please login again to continue.',
-    'REDIRECT_TO_LOGIN_IMMEDIATELY': True,
-}
 
 django_heroku.settings(locals())
