@@ -8,7 +8,7 @@ from .models import PlantaTree
 
 #function for testing wbsite UI
 def home(request):
-    return render(request, 'base.html')
+    return render(request, 'index.html')
     # pass
     
 def navbar(request):
