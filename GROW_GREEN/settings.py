@@ -30,7 +30,7 @@ SECRET_KEY = 'ed3f225796289a0c49a99dc275962e61975a35ad76e99ed2'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1','groww-green.herokuapp.com']
 
