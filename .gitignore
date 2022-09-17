@@ -16,14 +16,16 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
-
+staticfile.json
 # Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop
 Network Trash Folder
 Temporary Items
 .apdisk
-
+.github
+.idea
+.github/
 settings.ini
 ### Python ###
 # Byte-compiled / optimized / DLL files
