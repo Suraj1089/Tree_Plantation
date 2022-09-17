@@ -1,7 +1,7 @@
  
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap');
 
-.brand-banner__header {
+/* .brand-banner__header {
     color:rgb(rgb(194, 0, 0), green, blue);
     display: inline-block;
     font-family: FaktCondensed,AvenirNextCondensed-Medium,Segoe UI,sans-serif;
@@ -110,6 +110,227 @@ footer {
   color: #8c8c8c;
   margin-top: 0.5rem;
   
+} */
+
+.header {
+	background: #343a40!important;
+	padding-top: 60px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
- 
+.logo a {
+	font-size: 1.25rem;
+	/* font-weight: bold; */
+	/* text-transform: uppercase; */
+	color: #fff;
+	line-height: 40px;
+}
+
+.logo_section {
+	text-align: center;
+}
+
+.logo {
+	float: left;
+}
+
+nav.main-menu {
+	float: right;
+	margin-left: 0;
+}
+
+.menu-area-main li:hover a,
+.menu-area-main li:focus a {
+	color: #000;
+}
+
+.menu-area-main li.active a {
+	color: #000;
+}
+
+.main-menu ul>li nth:child(5) a {
+	padding-right: 0px;
+}
+
+.main-menu {
+	text-align: center;
+}
+
+.main-menu ul {
+	margin: 0;
+	list-style-type: none;
+}
+
+.main-menu ul>li {
+	display: inline-block;
+	position: relative;
+}
+
+.main-menu ul>li a {
+	padding: 6px 25px 0 25px;	
+	line-height: 20px;
+	font-size: 17px;
+	display: block;
+	font-weight: 500;
+	color: #fff;
+}
+
+.main-menu ul li:last-child a {
+	padding-right: 0;
+}
+
+.main-menu ul>li .sub-down li a {
+	color: #114c7d;
+	font-size: 15px;
+	text-transform: capitalize;
+	font-weight: 300;
+	padding: 12px 5px;
+	position: relative;
+	border-bottom: solid #eee 1px;
+}
+
+.main-menu ul>li .sub-down li a::before {}
+
+.main-menu ul>li .sub-down li a:hover {
+	color: #111111;
+}
+
+.main-menu ul>li .sub-down li a:hover::before {}
+
+.main-menu ul li:first-child {
+	margin-left: 0;
+}
+
+.main-menu ul>li>ul {
+	opacity: 0;
+	position: absolute;
+	text-align: left;
+	top: 100%;
+	-webkit-transform: scaleY(0);
+	transform: scaleY(0);
+	-webkit-transform-origin: 0 0 0;
+	transform-origin: 0 0 0;
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	visibility: hidden;
+	width: 240px;
+	z-index: 999;
+	background: #fff;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+.main-menu>ul>li:hover>ul {
+	-webkit-transform: scaleY(1);
+	transform: scaleY(1);
+	visibility: visible;
+	opacity: 1;
+}
+
+.main-menu ul>li>ul>li {
+	margin: 0px;
+	position: relative;
+	display: block;
+}
+
+.main-menu ul>li>ul>li:hover>ul {
+	-webkit-transform: scaleY(1);
+	transform: scaleY(1);
+	visibility: visible;
+	opacity: 1;
+	left: 100%;
+	top: 10px;
+}
+
+.main-menu ul>li>ul>li>a {
+	background: none !important;
+}
+
+.main-menu ul>li {
+	position: inherit;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.main-menu ul>li:nth-child {
+	padding-right: 0px;
+}
+
+nav.main-menu {
+	float: right;
+	margin-left: 0;
+}
+
+.nav>li {
+	position: inherit;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .main-menu ul>li a {
+        padding: 20px 20px 20px;
+    }
+}
+
+@media only screen and (min-width: 599px) and (max-width: 767px) {
+    .logo {
+        text-align: center;
+    }
+
+	.menu-area-main {
+        height: 256px;
+        overflow-y: auto;
+    }
+
+	.menu-area-main .megamenu .men-cat {
+        padding: 0px 15px;
+    }
+    .menu-area-main .megamenu .women-cat {
+        padding: 0px 15px;
+    }
+    .menu-area-main .megamenu .el-cat {
+        padding: 0px 15px;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+	.menu-area-main .megamenu .men-cat {
+        padding: 0px 15px;
+    }
+    .menu-area-main .megamenu .women-cat {
+        padding: 0px 15px;
+    }
+    .menu-area-main .megamenu .el-cat {
+        padding: 0px 15px;
+    }
+	.menu-area-main {
+        height: 290px;
+        overflow-y: auto;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .main-menu ul>li a {
+        padding: 7px 20px 0 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .main-menu ul>li a {
+       padding: 8px 7px 0 7px;
+    }
+}
+
+@media (max-width: 575px) {
+    .header {
+        padding-bottom: 0px;
+    }
+    .logo {
+        text-align: center !important;
+        padding-bottom: 25px;
+        float: inherit;
+    }
+}

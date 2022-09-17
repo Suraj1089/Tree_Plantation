@@ -5,7 +5,7 @@
 
     {% comment %} <link rel="stylesheet" href="./css/navbarr.css"> {% endcomment %}
 </head>
-<nav class="  navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+{% comment %} <nav class="  navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 
     <a class="navbar-brand" href="#">
         <div id="growgreen">
@@ -61,8 +61,53 @@
 
         </div>
         </a>
-</nav>
+</nav> {% endcomment %}
+<!-- header -->
+<header>
+    <!-- header inner -->
+    <div class="header">
+    {% comment %} <div class="container"> {% endcomment %}
+        <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+            <div class="full">
+                <div class="center-desk">
+                    <div class="logo"> 
+                        <img src="{% static 'images/icon.png' %}" width="30" height="40" alt="">
+                        <a class="navbar-brand" href="#">GrowGreen.org</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+            <div class="menu-area">
+                <div class="limit-box">
+                    <nav class="main-menu">
+                    <ul class="menu-area-main">
+                        <li class="active">
+                            <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li> <a href="{% url 'plant_ui' %}">Plant Tree</a></li>
+                        <li> <a href="{% url 'plant_ui' %}">Donate</a></li>
+                        <li> <a href={% url 'contact_growgreen' %}>Contact Us</a></li>
+                        {% comment %} <a href="#" class="button button__header">Order Now!</a> {% endcomment %}
+                        {% if user.is_authenticated %}
+                            <a class="btn btn-accent mr-3 logged-in" id="headersign" href="{% url 'dashboard' %}">Dashboard</a>
+                            <a class="btn btn-accent logged-in" id="headersignout" href="{% url 'logout' %}">SIGN OUT</a>
 
+                        {% else %}
+                            <a class="btn btn-accent mr-3" id="headersign" href="{% url 'login' %}">SIGN IN</a>
+                            <a class="btn btn-accent " onclick="document.getElementById('id01').style.display='block"
+                               id="headersignout" href="{% url 'register' %}">SIGN UP</a>
+
+                        {% endif %}
+                    </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</header>
 
 <style>
     #navbarNav2 {
