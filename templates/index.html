@@ -22,9 +22,9 @@
         <!-- Responsive-->
         <link rel="stylesheet" href="{%static 'css/responsive.css' %}">
         <!-- fevicon -->
-        <link rel="icon" href="images/fevicon.png" type="image/gif" />
+        <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif" />
         <!-- Scrollbar Custom CSS -->
-        <link rel="stylesheet" href="static/css/jquery.mCustomScrollbar.min.css">
+        <link rel="stylesheet" href="{% static 'static/css/jquery.mCustomScrollbar.min.css' %}">
         <!-- Tweaks for older IEs-->
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
@@ -36,9 +36,9 @@
    <!-- body -->
    <body class="main-layout">
         <!-- loader  -->
-        {% comment %} <div class="loader_bg">
+        <!-- {% comment %} <div class="loader_bg">
             <div class="loader"><img src="static/assets/images/loading.gif" alt="#" /></div>
-        </div> {% endcomment %}
+        </div> {% endcomment %} -->
         <!-- end loader --> 
 
         <!-- header -->
@@ -50,9 +50,9 @@
                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
                             <div class="full">
                                 <div class="center-desk">
-                                    {% comment %} <img src="static/assets/images/icon.png" width="30" height="40" alt="logo"> {% endcomment %}
+                                    {% comment %} <img src="{% static '/assets/images/icon.png' %}" width="30" height="40" alt="logo"> {% endcomment %}
                                     <div class="logo"> 
-                                        <img src="static/assets/images/icon.png" width="30" height="40" alt="logo">
+                                        <img src="{% static './assets/images/icon.png' %}" width="30" height="40" alt="logo">
                                         <a href="index.html">GrowGreen</a> 
                                     </div>
                                 </div>
@@ -78,7 +78,7 @@
             {% comment %} <nav class="navbar background h-nav-resp">
                 <ul class="nav-list v-class-resp">
                     <div class="logo">
-                        <img src="static/assets/images/icon.png" alt="logo">
+                        <img src="{% static 'static/assets/images/icon.png' %}" alt="logo">
                         <span class="brand-name">GrowGreen</span>
                     </div>
                     <li><a href="#">Home</a></li>
@@ -183,7 +183,7 @@
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                        <div class="about-img"><figure><img src="images/aboutimg.png" alt="img"/></figure></div> 
+                        <div class="about-img"><figure><img src="{% static 'images/aboutimg.png' %}" alt="img"/></figure></div> 
                     </div>
                 </div>
                 <a href="Javascript:void(0)">read more</a>
