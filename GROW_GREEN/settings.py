@@ -13,6 +13,13 @@ import os
 import django_heroku
 from pathlib import Path
 import dj_database_url
+# from dotenv import load_dotenv
+import environ
+
+env = environ.Env()
+# reading .env file
+environ.Env.read_env()
+# load_dotenv(".env")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,11 +30,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = 'ed3f225796289a0c49a99dc275962e61975a35ad76e99ed2'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1','groww-green.herokuapp.com']
 
@@ -94,17 +101,18 @@ WSGI_APPLICATION = 'GROW_GREEN.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+password = os.getenv('PASSWORD')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'grow-green',
-        'USER': 'postgres',
-        'PASSWORD': 'PostgresqlSuraj@123',
+        'USER': os.getenv('USER'),
+        'PASSWORD': password,
         'HOST': '',
         'PORT': '',
     }
 }
-
+# print(os.getenv('PASSWORD'))
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
 
