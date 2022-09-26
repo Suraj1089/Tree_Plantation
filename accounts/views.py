@@ -1,5 +1,4 @@
 
-from curses import use_env
 from multiprocessing import context
 from django.forms import EmailInput
 from django.http import HttpResponse
