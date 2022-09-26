@@ -46,7 +46,7 @@ def plant_tree(request):
 
         plat_tree = PlantaTree(first_name=first_name, last_name=last_name, username=user_name,
                                tree_name=tree_name, tree_pictures=tree_pictures, tree_description=tree_description)
-
+        #save to database
         plat_tree.save()
 
         return redirect('home')
